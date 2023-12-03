@@ -1,5 +1,8 @@
-<x-app-layout>
-
+<x-guest-layout>
+    <x-authentication-card>
+        <x-slot name="logo">
+            <x-authentication-card-logo />
+        </x-slot>
 
         <div x-data="{ recovery: false }">
             <div class="mb-4 text-sm text-gray-600" x-show="! recovery">
@@ -51,4 +54,5 @@
                 </div>
             </form>
         </div>
-</x-app-layout>
+    </x-authentication-card>
+</x-guest-layout>

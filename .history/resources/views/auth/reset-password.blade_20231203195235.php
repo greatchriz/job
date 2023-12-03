@@ -1,6 +1,8 @@
 <x-app-layout>
 
-
+        <x-slot name="logo">
+            <x-authentication-card-logo />
+        </x-slot>
 
         <x-validation-errors class="mb-4" />
 
@@ -30,4 +32,5 @@
                 </x-button>
             </div>
         </form>
-</x-app-layout>
+    <x-app-layout>
+
