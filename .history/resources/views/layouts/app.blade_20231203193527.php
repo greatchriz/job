@@ -131,7 +131,7 @@
                                 <ul class="sub-menu">
                                     <li><a href="dashboard.html">Candidate
                                             Dashboard</a></li>
-                                    <li><a href="/register">Post A Jobs</a></li>
+                                    <li><a href="job-post.html">Post A Jobs</a></li>
                                     <li><a href="pricing-plan.html">Pricing Plan</a></li>
                                     <li><a href="faq.html">FAQ</a></li>
                                     <li><a href="checkout.html">Checkout</a></li>
@@ -303,7 +303,7 @@
                             <li class="d-md-flex d-none">
                                 <div class="post-job-btn">
                                     <a class="primry-btn-2 lg-btn"
-                                        href="/register">Post Job
+                                        href="job-post.html">Post Job
                                         <svg width="15" height="13"
                                             viewBox="0 0 15 13"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -381,7 +381,7 @@
                                 </div>
                                 <div class="menu-container">
                                     <ul>
-                                        <li><a href="/register">Post A Job <i
+                                        <li><a href="job-post.html">Post A Job <i
                                                     class="bx bx-up-arrow-alt"></i></a></li>
                                         <li><a href="#">Browse Candidates <i
                                                     class="bx bx-up-arrow-alt"></i></a></li>
