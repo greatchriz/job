@@ -75,20 +75,6 @@ class CompanySeeder extends Seeder
                 'category' => 'Hotels, Lounges',
                 'description' => 'Fletcher Hotels sets itself apart due to its authentic hotel-restaurants which are often housed in historic buildings. All hotels are situated in fantastic locations in the Netherlands. You will find them on the beach or in the middle of the dunes, but also in the beautiful hills of Limburg, or in one of the Netherlands historic cities. Moreover, all our hotels are unique, so each hotel provides a different atmosphere and experience.',
                 'size' => '1001-5000',
-            ],
-
-            [
-                'name' => 'Louvre Hotels Group',
-
-                'logo' => 'https://seekvectorlogo.com/wp-content/uploads/2020/11/louvre-hotels-group-vector-logo-small.png',
-
-                'location' => 'Amersfoort, Utrecht, Netherlands ',
-
-                'category' => 'Hotels, Lounges',
-
-                'description' => 'Louvre Hotels Group is a major player in the global hospitality industry,<br> with a portfolio that now includes more than 1,600 hotels in 54 countries.<br> Louvre Hotels Group is a subsidiary of Jin Jiang International Holdings Co., Ltd.,<br> the world’s 2nd largest hotel group.',
-
-                'size' => '10,001+',
             ]
 
         ];

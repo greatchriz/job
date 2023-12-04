@@ -188,39 +188,6 @@ class JobSeeder extends Seeder
 
             ],
 
-            [
-                'company_id' => 5,
-                'title' => 'Operations Management Intern for Hotels',
-                'description' => 'In the position of Operations Intern at Louvre Hotels Group, you work closely with the operational team of the Benelux and the management of the hotels. You will gain practical knowledge in the field of hotel management at head office level. You will have the opportunity to be in charge of and develop an assigned project, as well as to assist in other operational daily tasks. You will collaborate with other colleagues in the regional office, such as HR, sales and revenue, and you will have an insight about how the different departments relate and collaborate.',
-
-                'responsibilities' => 'You plan your work together and coordinate with the operational team.<br>
-                You will work together with general managers of hotels on both project level and operational daily situations.<br>
-                You play a big role in the rollout of the operational strategy.<br>
-                You will be in charge of a project that you will develop with the support of the operational team and in collaboration with other departments.<br>
-                You present your ideas and visions to the relevant parties.<br>
-                You make sure that you maintain internal and external communication.<br>
-                You help in the administrative tasks within the department.',
-
-                'experiences' => '• You have experience in the field of hotel management.',
-
-                'requirements' => 'You are looking for an internship, which you need to complete as part of your study for a higher education institution.<br>
-                You are available for a fulltime internship, for a minimum of 20 weeks.<br>
-                You are passionate about working in the hospitality industry.<br>
-                You are solution oriented with an eye for detail.<br>
-                You can understand and follow guidelines.<br>
-                You have the flexibility to respond to different work situations.<br>
-                You have good Microsoft Office skills.<br>
-                You have good communication skills in English, Dutch is a plus.<br>',
-
-
-                'salary' => '€12,000.000',
-                'deadline' => '2024-01-25',
-
-
-
-            ],
-
-
 
 
         ];

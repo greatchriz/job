@@ -55,17 +55,12 @@ class CompanySeeder extends Seeder
             ],
 
             [
-                'name' => 'Papendal Hotel',
-                'logo' => 'https://papendal.com/wp-content/themes/papendal/img/papendal-logo.png',
-                'location' => 'Papendallaan, Arnhem, Gelderland 6816 VD, NL',
+                'name' => 'Sofitel London London',
+                'logo' => 'https://www.boutique-hotel-vohburg.de/images/Beckenlehner.png',
+                'location' => 'Grote Markt 36, 9711 LV Groningen',
                 'category' => 'Hotels, Lounges',
-                'description' => 'Hidden in the forests of the Veluwe, on the outskirts of the city of Arnhem, you will discover the secret of Papendal. <br>At our beautiful and dynamic location, surrounded by nature, sporting excellence and business join together in a colourful way.
-                <br>Everyone is able to perform at their very best at such a unique location! So can you.
-                <br>We will gladly support you with this. By thinking along with you, for example, or by always being at your service.
-                <br>Whether it is enhancing knowledge during a congress, developing a sports talent or organising an event.
-                <br>Together we set the bar at the right level for you to achieve your goals.
-                <br>Powerfully and as a true entrepreneur.',
-                'size' => '51-250',
+                'description' => 'The hotel is characterized by its classic appearance that feels warm and homely. Upon entering you immediately feel welcome by the hospitality of the employees and the cozy atmosphere in the hotel. As a guest at Boutique Hotel De Doelen you can experience the city like a real local due to the perfect location. The location is close to all the nice coffee shops, bars, restaurants, shopping streets and sights!.',
+                'size' => '25-150',
             ],
 
             [
@@ -75,20 +70,6 @@ class CompanySeeder extends Seeder
                 'category' => 'Hotels, Lounges',
                 'description' => 'Fletcher Hotels sets itself apart due to its authentic hotel-restaurants which are often housed in historic buildings. All hotels are situated in fantastic locations in the Netherlands. You will find them on the beach or in the middle of the dunes, but also in the beautiful hills of Limburg, or in one of the Netherlands historic cities. Moreover, all our hotels are unique, so each hotel provides a different atmosphere and experience.',
                 'size' => '1001-5000',
-            ],
-
-            [
-                'name' => 'Louvre Hotels Group',
-
-                'logo' => 'https://seekvectorlogo.com/wp-content/uploads/2020/11/louvre-hotels-group-vector-logo-small.png',
-
-                'location' => 'Amersfoort, Utrecht, Netherlands ',
-
-                'category' => 'Hotels, Lounges',
-
-                'description' => 'Louvre Hotels Group is a major player in the global hospitality industry,<br> with a portfolio that now includes more than 1,600 hotels in 54 countries.<br> Louvre Hotels Group is a subsidiary of Jin Jiang International Holdings Co., Ltd.,<br> the world’s 2nd largest hotel group.',
-
-                'size' => '10,001+',
             ]
 
         ];
