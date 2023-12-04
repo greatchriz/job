@@ -102,9 +102,6 @@
                         <ul class="menu-list">
                             <li @class(['active' => request()->routeIs('home')])><a href="/">Home</a></li>
 
-                            <li @class(['active' => request()->routeIs('jobs.index')])><a href="/jobs">Find Jobs</a></li>
-
-
 
 
 
