@@ -141,14 +141,12 @@
                                             border="0"
                                         >
                                             <tbody>
-
                                                 <tr>
                                                     <td
                                                         style="padding: 0 0 24px 0; font-size: 18px; line-height: 150%; font-weight: bold; color: #000000; letter-spacing: 0.01em;">
                                                         Dear {{ $jobApplicationData['receiver_name'] }},
                                                     </td>
                                                 </tr>
-
                                                 <tr>
                                                     <td
                                                         style="padding: 0 0 10px 0; font-size: 14px; line-height: 150%; font-weight: 400; color: #000000; letter-spacing: 0.01em;">

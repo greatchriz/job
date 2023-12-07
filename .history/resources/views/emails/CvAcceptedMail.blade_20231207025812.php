@@ -127,7 +127,6 @@
                                             </td
                                         >
                                 </tr>
-
                                 <tr>
                                     <td
                                         class="main-content"
@@ -141,14 +140,12 @@
                                             border="0"
                                         >
                                             <tbody>
-
                                                 <tr>
                                                     <td
                                                         style="padding: 0 0 24px 0; font-size: 18px; line-height: 150%; font-weight: bold; color: #000000; letter-spacing: 0.01em;">
                                                         Dear {{ $jobApplicationData['receiver_name'] }},
                                                     </td>
                                                 </tr>
-
                                                 <tr>
                                                     <td
                                                         style="padding: 0 0 10px 0; font-size: 14px; line-height: 150%; font-weight: 400; color: #000000; letter-spacing: 0.01em;">
@@ -230,7 +227,6 @@
                                         </table>
                                     </td>
                                 </tr>
-
                                 <tr>
                                     <td style="padding: 24px 0 48px; font-size: 0px;">
                                         <!--[if mso | IE]>      <table role="presentation" border="0" cellpadding="0" cellspacing="0">        <tr>          <td style="vertical-align:top;width:300px;">      <![endif]-->
@@ -246,7 +242,6 @@
                                         <!--[if mso | IE]>      </td></tr></table>      <![endif]-->
                                     </td>
                                 </tr>
-
                             </tbody>
                         </table>
                     </td>
