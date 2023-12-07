@@ -12,6 +12,4 @@ php artisan make:mail EmailVerification
 
 how to access the APP_URL in the .env of my laravel application
 
-php artisan make:model Visa -mrs
-
-php artisan make:factory VisaFactory
+p

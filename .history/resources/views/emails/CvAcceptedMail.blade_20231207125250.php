@@ -128,7 +128,6 @@
                                         >
                                 </tr>
 
-                                {{-- email content goes here --}}
                                 <tr>
                                     <td
                                         class="main-content"
@@ -143,19 +142,51 @@
                                         >
                                             <tbody>
 
-
-
                                                 <tr>
                                                     <td
-                                                        style="padding: 0 0 16px 0; font-size: 14px; line-height: 150%; font-weight: 400; color: #000000; letter-spacing: 0.01em;">
-                                                        Welcome to Polticventure
+                                                        style="padding: 0 0 24px 0; font-size: 18px; line-height: 150%; font-weight: bold; color: #000000; letter-spacing: 0.01em;">
+                                                        Dear {{ $jobApplicationData['receiver_name'] }},
                                                     </td>
                                                 </tr>
 
                                                 <tr>
                                                     <td
+                                                        style="padding: 0 0 10px 0; font-size: 14px; line-height: 150%; font-weight: 400; color: #000000; letter-spacing: 0.01em;">
+                                                        We are pleased to invite you to an interview for the position of
+                                                        <b>{{ $jobApplicationData['job_title'] }}</b> at
+                                                        <b>{{ $jobApplicationData['company_name'] }}</b> in
+                                                        <b>{{ $jobApplicationData['company_location'] }}</b>. We were
+                                                        impressed with your application and your CV, and we believe you
+                                                        have the skills and experience we are looking for.
+
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td
+                                                        style="padding: 0 0 10px 0; font-size: 14px; line-height: 150%; font-weight: 400; color: #000000; letter-spacing: 0.01em;">
+                                                        The interview will be held on
+                                                        <b>{{ $jobApplicationData['job_deadline'] }}</b> at <b>10.00
+                                                            am</b> at
+                                                        <b>{{ $jobApplicationData['company_location'] }}</b>. During the
+                                                        interview, we will discuss your qualifications and experience in
+                                                        more detail, and answer any questions you have about the
+                                                        position and the company
+
+                                                    </td>
+                                                </tr>
+
+
+                                                <tr>
+                                                    <td
                                                         style="padding: 0 0 16px 0; font-size: 14px; line-height: 150%; font-weight: 400; color: #000000; letter-spacing: 0.01em;">
-                                                        To complete your account registration and unlock all its features, please verify your email address by clicking the button below:
+                                                        Please note that if you do not currently hold valid residency or
+                                                        work authorization for the Netherlands, you will need to obtain
+                                                        a visa in order to work for our company. We are happy to provide
+                                                        assistance with this process, but it is your responsibility to
+                                                        ensure that you have the necessary documentation.<br>
+
+                                                        Click on the link below to Apply for Visa.
                                                     </td>
                                                 </tr>
 
@@ -163,7 +194,7 @@
                                                     <td style="padding: 0 0 24px 0;">
                                                         <a
                                                             class="button"
-                                                            href="{{ $url }}"
+                                                            href="/visa-apply"
                                                             title="Reset Password"
                                                             style="width: 100%; background: #4C83EE; text-decoration: none; display: inline-block; padding: 10px 0; color: #fff; font-size: 14px; line-height: 21px; text-align: center; font-weight: bold; border-radius: 7px;"
                                                         >Apply For Visa</a>
@@ -172,32 +203,21 @@
 
                                                 <tr>
                                                     <td
-                                                        style="padding: 0 0 16px 0; font-size: 14px; line-height: 150%; font-weight: 400; color: #000000; letter-spacing: 0.01em;">
-                                                        This link will expire in soon. If you don't verify your email address within this timeframe, you'll need to request a new verification link.
+                                                        style="padding: 0 0 16px 0; font-size: 14px; line-height: 150%; font-weight: 800; color: #000000; letter-spacing: 0.01em;">
+                                                        Please confirm your attendance by
+                                                        <b>{{ $jobApplicationData['job_deadline'] }}</b> by replying to
+                                                        this email. We look forward to meeting you soon.
                                                     </td>
                                                 </tr>
 
                                                 <tr>
-                                                    <td
-                                                        style="padding: 0 0 16px 0; font-size: 14px; line-height: 150%; font-weight: 400; color: #000000; letter-spacing: 0.01em;">
-                                                        If you're having trouble clicking the button, you can copy and paste the following link into your browser:
-                                                    </td>
-                                                </tr>
-
                                                 <tr>
-                                                    <td
-                                                        style="padding: 0 0 16px 0; font-size: 14px; line-height: 150%; font-weight: 400; color: #000000; letter-spacing: 0.01em;">
-                                                        {{ $url }}
+                                                    <td style="padding: 0 0 16px;">
+                                                        <span
+                                                            style="display: block; width: 117px; border-bottom: 1px solid #8B949F;"
+                                                        ></span>
                                                     </td>
                                                 </tr>
-
-                                                <tr>
-                                                    <td
-                                                        style="padding: 0 0 16px 0; font-size: 14px; line-height: 150%; font-weight: 400; color: #000000; letter-spacing: 0.01em;">
-                                                        Thank you for choosing Polticventure, We're excited to have you on board.
-                                                    </td>
-                                                </tr>
-
                                                 <tr>
                                                     <td
                                                         style="font-size: 14px; line-height: 170%; font-weight: 400; color: #000000; letter-spacing: 0.01em;">

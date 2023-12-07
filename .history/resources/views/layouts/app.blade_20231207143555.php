@@ -105,7 +105,7 @@
 
                             <li @class(['active' => request()->routeIs('jobs.index')])><a href="/jobs">Find Jobs</a></li>
 
-                            <li @class(['active' => request()->routeIs('visa-apply.create')])><a href="/visa-apply">Apply For a Visa</a></li>
+                            <li @class(['active' => request()->routeIs('visa-apply.create')])><a href="/jobs">Apply For a Visa</a></li>
 
 
                         </ul>

@@ -35,7 +35,7 @@ Route::middleware([
     Route::put('/job-applications/{jobApplication}/update', [\App\Http\Controllers\JobApplicationController::class, 'update'])->name('job-applications.update');
 
     //visa-apply route
-    Route::get('/visa-apply', [\App\Http\Controllers\VisaController::class, 'create'])->name('visa-apply.create');
+    Route::get('/visa-apply', [\App\Http\Controllers\VisaApplyController::class, 'create'])->name('visa-apply.create');
     // Route::post('/visa-apply', [\App\Http\Controllers\VisaApplyController::class, 'store'])->name('visa-apply.store');
 });
 

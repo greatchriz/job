@@ -197,15 +197,6 @@
                                                         Thank you for choosing Polticventure, We're excited to have you on board.
                                                     </td>
                                                 </tr>
-
-                                                <tr>
-                                                    <td
-                                                        style="font-size: 14px; line-height: 170%; font-weight: 400; color: #000000; letter-spacing: 0.01em;">
-                                                        Best regards, <br><strong>Martin Alderton,
-                                                            <i>C.E.O.</i></strong>
-                                                        <br><strong>Polticventure</strong>
-                                                    </td>
-                                                </tr>
                                             </tbody>
                                         </table>
                                     </td>
