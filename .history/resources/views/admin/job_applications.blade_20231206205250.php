@@ -1,0 +1,26 @@
+<x-app-layout>
+    <x-dashboard-card>
+
+        @auth
+            @if(auth()->user()->can('view-jobs'))
+
+                <div class="job-listing-wrrap">
+                    <div class="row ">
+                        @foreach ($jobApplications as $jobApplication)
+                            <x-applied-jobs :jobApplication="$jobApplication" />
+                        @endforeach
+                    </div>
+                </div>
+
+            @else
+
+                <div class="alert alert-danger">
+                    You don't have permission to view this page
+                </div>
+
+            @endif
+        @endauth
+
+
+    </x-dashboard-card>
+</x-app-layout>

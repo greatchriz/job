@@ -1,0 +1,10 @@
+php artisan make:mail CvRecieved
+
+php artisan make:role Admin
+php artisan make:permission create-jobs
+php artisan make:permission edit-jobs
+php artisan make:permission delete-jobs
+php artisan make:permission create-job-applications
+php artisan make:permission edit-job-applications
+php artisan make:permission delete-job-applications
+
