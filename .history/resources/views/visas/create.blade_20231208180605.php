@@ -55,16 +55,16 @@
                             <div class="row">
 
                                 {{-- loop through the array of form inputs and call the component --}}
-                                @foreach ($textFormInputs as $textFormInput)
-
+                                @foreach($textFormInputs as $textFormInput => $textFormInput)
                                     <x-form-input.input-wrapper
-                                        :id="$textFormInput->name"
-                                        :icon="$textFormInput->icon"
-                                        :name="$textFormInput->name"
-                                        :type="$textFormInput->type"
-                                        :placeholder="$textFormInput->placeholder"
-
-                                        :label="$textFormInput->label"
+                                        id="{{ $textFormInput->name }}"
+                                        icon="{{ $textFormInput->icon }}"
+                                        name="{{ $textFormInput->name }}"
+                                        type="{{ $textFormInput->type }}"
+                                        @if($textFormInput->placeholder ==! '')
+                                            placeholder="{{ $textFormInput->placeholder }}"
+                                        @endif
+                                        label="{{ $textFormInput->label }}"
                                     />
                                 @endforeach
 

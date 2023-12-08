@@ -62,8 +62,6 @@
                                         :icon="$textFormInput->icon"
                                         :name="$textFormInput->name"
                                         :type="$textFormInput->type"
-                                        :placeholder="$textFormInput->placeholder"
-
                                         :label="$textFormInput->label"
                                     />
                                 @endforeach

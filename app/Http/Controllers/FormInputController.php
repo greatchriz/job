@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\FormInput;
-use App\Models\Visa;
 use Illuminate\Http\Request;
 
-class VisaController extends Controller
+class FormInputController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,12 +20,7 @@ class VisaController extends Controller
      */
     public function create()
     {
-        //get all form inputs that has a type of text
-        $textFormInputs = FormInput::where('type', 'text')->get();
-
-        return view('visas.create', [
-            'textFormInputs' => $textFormInputs
-        ]);
+        //
     }
 
     /**
@@ -40,7 +34,7 @@ class VisaController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Visa $visa)
+    public function show(FormInput $formInput)
     {
         //
     }
@@ -48,7 +42,7 @@ class VisaController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Visa $visa)
+    public function edit(FormInput $formInput)
     {
         //
     }
@@ -56,7 +50,7 @@ class VisaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Visa $visa)
+    public function update(Request $request, FormInput $formInput)
     {
         //
     }
@@ -64,7 +58,7 @@ class VisaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Visa $visa)
+    public function destroy(FormInput $formInput)
     {
         //
     }

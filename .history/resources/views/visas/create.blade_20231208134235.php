@@ -54,20 +54,8 @@
                             class="edit-profile-form profile-form  mb-60">
                             <div class="row">
 
-                                {{-- loop through the array of form inputs and call the component --}}
-                                @foreach ($textFormInputs as $textFormInput)
-
-                                    <x-form-input.input-wrapper
-                                        :id="$textFormInput->name"
-                                        :icon="$textFormInput->icon"
-                                        :name="$textFormInput->name"
-                                        :type="$textFormInput->type"
-                                        :placeholder="$textFormInput->placeholder"
-
-                                        :label="$textFormInput->label"
-                                    />
-                                @endforeach
-
+                                {{-- 'name' => '', 'type' => '', 'placeholder', 'label' => '' --}}
+                                <x-form-input.input-wrapper id="firstname1" icon="user-2" name="firstname" type="text" placeholder="Mrs. Jacoline" label="First Name" />
 
 
                                 {{-- <div class="col-md-6">

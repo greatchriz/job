@@ -62,8 +62,9 @@
                                         :icon="$textFormInput->icon"
                                         :name="$textFormInput->name"
                                         :type="$textFormInput->type"
-                                        :placeholder="$textFormInput->placeholder"
-
+                                        @if($textFormInput->placeholder ==! '')
+                                            :placeholder="$textFormInput->placeholder"
+                                        @endif
                                         :label="$textFormInput->label"
                                     />
                                 @endforeach

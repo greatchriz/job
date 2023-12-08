@@ -297,7 +297,7 @@ Route::get('/die', function () {
         ],
     ];
 
-    foreach ($formInputs as $key => &$input) {
+    foreach ($formInputs as $input) {
         $input['name'] = Str::of($input['label'])->lower()->replace(' ', '_');
     }
 

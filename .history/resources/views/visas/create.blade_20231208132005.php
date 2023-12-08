@@ -54,23 +54,16 @@
                             class="edit-profile-form profile-form  mb-60">
                             <div class="row">
 
-                                {{-- loop through the array of form inputs and call the component --}}
-                                @foreach ($textFormInputs as $textFormInput)
+                                <x-form-input.input-wrapper id="firstname1" icon="user-2"/>
 
-                                    <x-form-input.input-wrapper
-                                        :id="$textFormInput->name"
-                                        :icon="$textFormInput->icon"
-                                        :name="$textFormInput->name"
-                                        :type="$textFormInput->type"
-                                        :placeholder="$textFormInput->placeholder"
-
-                                        :label="$textFormInput->label"
-                                    />
-                                @endforeach
+                                    {{-- slot for input --}}
 
 
 
-                                {{-- <div class="col-md-6">
+                                </x-form-input.input-wrapper>
+
+
+                                <div class="col-md-6">
                                     <div
                                         class="form-inner mb-25">
                                         <label for="firstname1">First
@@ -260,7 +253,7 @@
                                             id="description"
                                             placeholder="Something Write Yourself...."></textarea>
                                     </div>
-                                </div> --}}
+                                </div>
                                 <div class="row">
                                     <div class="col-lg-12 d-flex justify-content-center">
                                         <div class="pagination-area">

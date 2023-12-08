@@ -24,9 +24,7 @@ class VisaController extends Controller
         //get all form inputs that has a type of text
         $textFormInputs = FormInput::where('type', 'text')->get();
 
-        return view('visas.create', [
-            'textFormInputs' => $textFormInputs
-        ]);
+        return view('visas.create', compact('textFormInputs'));
     }
 
     /**
