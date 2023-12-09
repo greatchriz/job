@@ -6,7 +6,6 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
-use App\Models\FormInput;
 
 
 class AdminController extends Controller
@@ -71,35 +70,12 @@ class AdminController extends Controller
 
     //formInputsEdit
 
-    public function formInputsEdit(FormInput $formInput)
+    public function formInputsEdit($formInput)
     {
-        $formInput = FormInput::find($formInput->id);
-
-        $formInputColumn = array_keys($formInput->getOriginal());
-
-        $arrayValues = array_values($formInput->getOriginal());
-
-        // convert both arrays into a key-value pair
-
-        $data = array_combine($formInputColumn, $arrayValues);
-
-
-        // dd($data);
-         return view('admin.form-inputs-edit', [
-             'data' => $data,
-             'id' => $formInput->id
-         ]);
-
-    }
-
-    //formInputsUpdate
-
-    public function formInputsUpdate(Request $request, FormInput $formInput)
-    {
-        $formInput = FormInput::find($formInput->id);
-        $formInput->update($request->all());
-        return redirect()->route('admin.form-inputs')->with('success', 'FormInput updated successfully');
+        dd($formInput);
+        return view('admin.form-inputs-edit', [
+            'formInput' => $formInput
+        ]);
 
     }
 }
-

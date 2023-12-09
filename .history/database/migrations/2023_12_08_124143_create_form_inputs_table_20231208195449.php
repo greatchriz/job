@@ -37,7 +37,6 @@ return new class extends Migration
             $table->string('required')->nullable();
             $table->string('min')->nullable();
             $table->string('icon')->nullable();
-            $table->string('tag')->nullable();
             $table->timestamps();
         });
     }

@@ -336,30 +336,26 @@ False: => [
 True: [
 
 
-this is an example of a database table of an Item
+this is an array of Item
  $item = [
     [
-        'id' => 1,
         'type' => 'text',
         'label' => 'Full Name:',
         'placeholder' => 'Your full name',
         'required' => true,
     ],
     [
-        'id' => 2,
         'type' => 'date',
         'label' => 'Date of Birth:',
         'required' => true,
     ],
     [
-        'id' => 3,
         'type' => 'text',
         'label' => 'Place of Birth:',
         'placeholder' => 'Your place of birth',
         'required' => true,
     ],
     [
-        'id' => 4,
         'type' => 'select',
         'label' => 'Nationality:',
         'options' => $country = [
@@ -373,9 +369,3 @@ this is an example of a database table of an Item
     ],
 
  ];
-
- im using laravel version 10, How can i retrieve each of the model instance with its id
- and along with the model instance i want to get its key and value as an array.
- so i can be able to display the key or the value in the blade file.
-
- Ineed a step by step guide on how to accompliush that

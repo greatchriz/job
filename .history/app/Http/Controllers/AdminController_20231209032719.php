@@ -6,7 +6,6 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
-use App\Models\FormInput;
 
 
 class AdminController extends Controller
@@ -71,35 +70,23 @@ class AdminController extends Controller
 
     //formInputsEdit
 
-    public function formInputsEdit(FormInput $formInput)
+    public function formInputsEdit($formInput)
     {
-        $formInput = FormInput::find($formInput->id);
+        $formInput = \App\Models\FormInput::find($formInput);
 
-        $formInputColumn = array_keys($formInput->getOriginal());
+        $formInputs = collect($formInput)->map(function ($formInputData) {
+            return new \App\Models\FormInput($formInputData);
+        });
 
-        $arrayValues = array_values($formInput->getOriginal());
+        $formInputsWithKeysAndValues = $formInputs->mapWithKeys(function ($formInput) {
+            return [$formInput->key => $formInput->value];
+        });
 
-        // convert both arrays into a key-value pair
+        dd($formInputsWithKeysAndValues);
 
-        $data = array_combine($formInputColumn, $arrayValues);
-
-
-        // dd($data);
-         return view('admin.form-inputs-edit', [
-             'data' => $data,
-             'id' => $formInput->id
-         ]);
-
-    }
-
-    //formInputsUpdate
-
-    public function formInputsUpdate(Request $request, FormInput $formInput)
-    {
-        $formInput = FormInput::find($formInput->id);
-        $formInput->update($request->all());
-        return redirect()->route('admin.form-inputs')->with('success', 'FormInput updated successfully');
+        return view('admin.form-inputs-edit', [
+            'formInput' => $formInput
+        ]);
 
     }
 }
-

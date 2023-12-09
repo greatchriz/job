@@ -73,32 +73,15 @@ class AdminController extends Controller
 
     public function formInputsEdit(FormInput $formInput)
     {
-        $formInput = FormInput::find($formInput->id);
+        $firstName = FormInput::find($formInput->id);
 
-        $formInputColumn = array_keys($formInput->getOriginal());
+        $firstNameColumn = array_keys($firstName->getOriginal());
 
-        $arrayValues = array_values($formInput->getOriginal());
-
-        // convert both arrays into a key-value pair
-
-        $data = array_combine($formInputColumn, $arrayValues);
-
-
-        // dd($data);
+        $arrayValues = array_values($firstName->getOriginal());
+dd([$firstNameColumn, $arrayValues]);
          return view('admin.form-inputs-edit', [
-             'data' => $data,
-             'id' => $formInput->id
+             'formInput' => $formInput
          ]);
-
-    }
-
-    //formInputsUpdate
-
-    public function formInputsUpdate(Request $request, FormInput $formInput)
-    {
-        $formInput = FormInput::find($formInput->id);
-        $formInput->update($request->all());
-        return redirect()->route('admin.form-inputs')->with('success', 'FormInput updated successfully');
 
     }
 }

@@ -13,6 +13,8 @@ class FormInputController extends Controller
     public function index()
     {
         //get all the form input
+
+
     }
 
     /**

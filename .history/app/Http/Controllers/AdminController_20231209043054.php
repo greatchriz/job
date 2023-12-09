@@ -96,9 +96,10 @@ class AdminController extends Controller
 
     public function formInputsUpdate(Request $request, FormInput $formInput)
     {
+        dd($request->all());
         $formInput = FormInput::find($formInput->id);
         $formInput->update($request->all());
-        return redirect()->route('admin.form-inputs')->with('success', 'FormInput updated successfully');
+        return redirect()->route('admin.form-inputs');
 
     }
 }

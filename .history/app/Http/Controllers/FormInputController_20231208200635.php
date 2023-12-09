@@ -12,7 +12,12 @@ class FormInputController extends Controller
      */
     public function index()
     {
-        //get all the form input
+        //get all the form inputs
+
+        $formInputs = FormInput::all();
+        return view('form-inputs.index', compact('formInputs'));
+
+
     }
 
     /**

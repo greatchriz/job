@@ -35,12 +35,7 @@ Route::middleware([
     Route::get('/admin/job-applications', [\App\Http\Controllers\AdminController::class, 'jobApplications'])->name('admin.job-applications');
 
     //form-inputs route
-    Route::get('/admin/form-inputs', [\App\Http\Controllers\AdminController::class, 'formInputs'])->name('admin.form-inputs');
-
-    //form-input edit route
-    Route::get('/admin/form-inputs/{formInput}/edit', [\App\Http\Controllers\AdminController::class, 'formInputsEdit'])->name('admin.form-inputs.edit');
-
-    Route::put('/admin/form-inputs/{formInput}/update', [\App\Http\Controllers\AdminController::class, 'formInputsUpdate'])->name('admin.form-inputs.update');
+    Route::get('/admin/form-inputs', [\App\Http\Controllers\FormInputController::class, 'index'])->name('admin.form-inputs');
 
     Route::put('/job-applications/{jobApplication}/update', [\App\Http\Controllers\JobApplicationController::class, 'update'])->name('job-applications.update');
 
