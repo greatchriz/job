@@ -1,0 +1,7 @@
+@extends('normal-layout')
+    @section('header')
+        @include('normal-header')
+    @endsection
+
+
+
