@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Job;
 use Illuminate\Http\Request;
-use DOMDocument;
-use DOMXPath;
 
 class MainPageController extends Controller
 {
@@ -70,15 +68,18 @@ class MainPageController extends Controller
     //jobListing
     public function jobListing()
     {
-        //get the jobs array from the extractJobData function
-        $html = file_get_contents(public_path('jobs.html'));
-        $jobs = $this->extractJobData($html);
-        return view('main-pages.job-listing',['jobs' => $jobs]);
+        // get all jobs and sort them by created_at and paginate them
+        $jobs = Job::orderBy('created_at', 'desc')->paginate(80);
+        $totalJobs = Job::count();
+        return view('main-pages.job-listing', [
+            'jobs' => $jobs,
+            'totalJobs' => $totalJobs
+        ]);
     }
 
     //jobs-details
     public function jobsDetails(){
-        $html = file_get_contents(public_path('jobs.html'));
+        $html = file_get_contents('public/jobs.html');
         $jobData = $this->extractJobData($html);
     }
 
@@ -87,14 +88,8 @@ class MainPageController extends Controller
         // Create a new DOMDocument object
         $dom = new DOMDocument();
 
-        // suppress warning messages g
-        libxml_use_internal_errors(true);
-
         // Load the HTML content into the DOMDocument
         $dom->loadHTML($html);
-
-        // restore error handling
-        libxml_use_internal_errors(false);
 
         // Create an XPath object to query the DOMDocument
         $xpath = new DOMXPath($dom);
@@ -110,21 +105,14 @@ class MainPageController extends Controller
             // Extract the job data from the div element
 
             // Example code to extract the company logo URL
-            // $logo = $xpath->evaluate('string(.//div[@class="card-job-avatar"]/img/@data-src)', $div);
+            $logo = $xpath->evaluate('string(.//div[@class="logo"]/img/@src)', $div);
 
-            $logo = "https://www.jobsinnetwork.com/images/default.png";
-
-            //card-job-body-title
             // Example code to extract the job title
-            // i want to clear all whitespaces
-
-            $title = $xpath->evaluate('string(.//h2[@class="card-job-body-title"])', $div);
+            $title = $xpath->evaluate('string(.//h6/a)', $div);
 
             // Example code to extract the job description
-            // $description = $xpath->evaluate('string(.//p)', $div);
+            $description = $xpath->evaluate('string(.//p)', $div);
 
-
-            $description = $xpath->evaluate('string(.//p[@class="card-job-body-description"])', $div);
             // Create an array to store the job data
             $jobData = [
                 'logo' => $logo,

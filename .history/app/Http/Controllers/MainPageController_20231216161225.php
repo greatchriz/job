@@ -110,9 +110,7 @@ class MainPageController extends Controller
             // Extract the job data from the div element
 
             // Example code to extract the company logo URL
-            // $logo = $xpath->evaluate('string(.//div[@class="card-job-avatar"]/img/@data-src)', $div);
-
-            $logo = "https://www.jobsinnetwork.com/images/default.png";
+            $logo = $xpath->evaluate('string(.//div[@class="card-job-avatar"]/img/@data-src)', $div);
 
             //card-job-body-title
             // Example code to extract the job title
@@ -123,8 +121,7 @@ class MainPageController extends Controller
             // Example code to extract the job description
             // $description = $xpath->evaluate('string(.//p)', $div);
 
-
-            $description = $xpath->evaluate('string(.//p[@class="card-job-body-description"])', $div);
+            $description = 'Job Description';
             // Create an array to store the job data
             $jobData = [
                 'logo' => $logo,

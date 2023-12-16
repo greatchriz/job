@@ -40,9 +40,6 @@ Route::get('/contact-us', [\App\Http\Controllers\MainPageController::class, 'con
 
 Route::get('/job-listing', [\App\Http\Controllers\MainPageController::class, 'jobListing'])->name('job-listing');
 
-//jobsDetails
-Route::get('/jobs-details', [\App\Http\Controllers\MainPageController::class, 'jobsDetails'])->name('jobs-details');
-
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -73,6 +70,61 @@ Route::middleware([
 
     Route::post('/visa-apply', [\App\Http\Controllers\VisaController::class, 'store'])->name('visas.store');
 });
+
+//get route for job titles no controller route
+Route::get('/job-titles', function () {
+
+// get the file contents of public/jobs.html
+   $fileContents = file_get_contents(public_path('jobs.html'));
+   $dom = new DOMDocument();
+   @$dom->loadHTML($fileContents);
+   $xpath = new DOMXPath($dom);
+
+   $h2Contents = [];
+
+   //job title
+   //add the content of all the h2 tags to an array
+
+   $h2Elements = $xpath->query('//h2[@class="card-job-body-title"]');
+
+   foreach ($h2Elements as $h2Element) {
+      $h2Contents[] = $h2Element->nodeValue;
+   }
+
+
+   // company logo
+   // add the content of all the img tags to an array
+   $companyLogoSrc = $xpath->query('//img[@class="img lazyload"]');
+
+   foreach ($companyLogoSrc as $companyLogo) {
+      $companyLogoSrc[] = $companyLogo->getAttribute('src');
+   }
+
+   // get the content of all the span tags where the id is id="job-location"
+   // add the content of all the span tags to an array
+   $cardJobCountry = $xpath->query('//span[@id="job-location"]');
+
+   foreach ($cardJobCountry as $cardJobCountry) {
+      $cardJobCountry[] = $cardJobCountry->nodeValue;
+   }
+
+
+   // get all the array elements in a single array which are $h2Contents, $companyLogoSrc, $cardJobCountry
+
+   $jobContents = [
+      'jobTitles' => $h2Contents,
+      'companyLogos' => $companyLogoSrc,
+      'locations' => $cardJobCountry
+   ];
+
+   //return the $jobContents array
+
+   return response()->json($jobContents);
+
+
+
+});
+
 
 
 

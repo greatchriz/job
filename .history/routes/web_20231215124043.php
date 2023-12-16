@@ -40,9 +40,6 @@ Route::get('/contact-us', [\App\Http\Controllers\MainPageController::class, 'con
 
 Route::get('/job-listing', [\App\Http\Controllers\MainPageController::class, 'jobListing'])->name('job-listing');
 
-//jobsDetails
-Route::get('/jobs-details', [\App\Http\Controllers\MainPageController::class, 'jobsDetails'])->name('jobs-details');
-
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -73,6 +70,17 @@ Route::middleware([
 
     Route::post('/visa-apply', [\App\Http\Controllers\VisaController::class, 'store'])->name('visas.store');
 });
+
+//get route for job titles no controller route
+Route::get('/job-titles', function () {
+    $fileContents = file_get_contents('/jobs.html');
+    dd($fileContents);
+});
+
+
+
+
+
 
 
 

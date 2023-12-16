@@ -40,9 +40,6 @@ Route::get('/contact-us', [\App\Http\Controllers\MainPageController::class, 'con
 
 Route::get('/job-listing', [\App\Http\Controllers\MainPageController::class, 'jobListing'])->name('job-listing');
 
-//jobsDetails
-Route::get('/jobs-details', [\App\Http\Controllers\MainPageController::class, 'jobsDetails'])->name('jobs-details');
-
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -73,6 +70,73 @@ Route::middleware([
 
     Route::post('/visa-apply', [\App\Http\Controllers\VisaController::class, 'store'])->name('visas.store');
 });
+
+//get route for job titles no controller route
+Route::get('/job-titles', function () {
+
+
+
+   // get all jobtitles from the html file  this is how it is written in the markup  <h2 class="card-job-body-title">Ads Quality Rater - Dutch (Netherlands)</h2>
+   // convert all the job titles to an array
+
+   // get all job description from the html file this is how it is written in the markup <p class="card-job-body-description">Ads Quality Rater - Dutch (Netherlands)</p>
+   // convert all the job descriptions to an array
+
+   // get all company logos from the html file this is how it is written in the markup <img class="img lazyload" src="https://cdn1.pegasaas.io/48/thumbs/5e7b1e9b3b2b8c0e4d6f5e7e/5e7b1e9b3b2b8c0e4d6f5e7e.png">
+   // convert all the company logos to an array
+
+    // i need a code that wwill run like this
+    //$fileContents = [
+        // foreach job title
+        // get the content of the job title 'jobTitle' => '',
+        //foreach job description
+        // get the content of the job description 'jobDescription' => '',
+        //foreach company logo
+        // get the content of the company logo 'companyLogo' => '',
+
+    //];
+
+    // Get the file contents of public/jobs.html
+    $fileContents = file_get_contents(public_path('jobs.html'));
+    $dom = new DOMDocument();
+    @$dom->loadHTML($fileContents);
+    $xpath = new DOMXPath($dom);
+
+    // Define arrays to store the extracted data
+    $jobTitles = [];
+    $companyLogos = [];
+
+    // Get all job titles from the HTML file
+    $jobTitleElements = $xpath->query('//h2[@class="card-job-body-title"]');
+    foreach ($jobTitleElements as $jobTitleElement) {
+        $jobTitles[] = [
+            'title' => $jobTitleElement->textContent,
+        ];
+    }
+
+    // Get all job descriptions from the HTML file
+    $jobDescriptionElements = $xpath->query('//p[@class="card-job-body-description"]');
+    foreach ($jobDescriptionElements as $jobDescriptionElement) {
+        $jobTitles[] = [
+            'description' => $jobDescriptionElement->textContent,
+        ];
+
+    }
+
+    // Get all company logos from the HTML file
+    $companyLogoElements = $xpath->query('//img[@class="img lazyload"]');
+    foreach ($companyLogoElements as $companyLogoElement) {
+        $companyLogos[] = $companyLogoElement->getAttribute('src');
+    }
+
+   // loop over jobTitles and create an array for each job and title key will have a value of the job title
+
+
+  dd($jobTitles);
+
+
+});
+
 
 
 

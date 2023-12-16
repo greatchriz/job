@@ -123,8 +123,7 @@ class MainPageController extends Controller
             // Example code to extract the job description
             // $description = $xpath->evaluate('string(.//p)', $div);
 
-
-            $description = $xpath->evaluate('string(.//p[@class="card-job-body-description"])', $div);
+            $description = 'Job Description';
             // Create an array to store the job data
             $jobData = [
                 'logo' => $logo,

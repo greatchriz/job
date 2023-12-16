@@ -256,7 +256,7 @@
                                 <div class="inner-box">
                                     <div class="content">
                                     <span class="company-logo"><img
-                                        src="{{ $job['logo'] }}" alt></span>
+                                        src="https://www.jobsinnetwork.com/{{ $job['logo'] }}" alt></span>
                                     <h4><a href="#">{{ $job['title'] }}</a></h4>
                                     <p>{{ $job['description'] }}</p>
                                     <ul class="job-info">

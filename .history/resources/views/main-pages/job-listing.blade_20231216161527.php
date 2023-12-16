@@ -228,7 +228,14 @@
 
                         <!-- ls Switcher -->
                         <div class="ls-switcher">
-
+                        <div class="showing-result">
+                            <div class="text">Showing
+                                <strong>
+                                    {{-- display $jobs  current page number --}}
+                                    {{ $jobs->currentPage() }}
+                                </strong> of <strong>{{ $jobs->count() }}</strong>
+                            jobs</div>
+                        </div>
                         <div class="sort-by">
                             <select class="chosen-select">
                             <option>New Jobs</option>
@@ -256,9 +263,9 @@
                                 <div class="inner-box">
                                     <div class="content">
                                     <span class="company-logo"><img
-                                        src="{{ $job['logo'] }}" alt></span>
-                                    <h4><a href="#">{{ $job['title'] }}</a></h4>
-                                    <p>{{ $job['description'] }}</p>
+                                        src="{{ $job->logo }}" alt></span>
+                                    <h4><a href="#">{{ $job->title }}</a></h4>
+                                    <p>{{ $job->description }}</p>
                                     <ul class="job-info">
                                         <li><span class="icon flaticon-briefcase"></span>
                                         Segment</li>

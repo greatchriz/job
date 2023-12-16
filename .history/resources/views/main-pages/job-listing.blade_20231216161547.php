@@ -256,9 +256,9 @@
                                 <div class="inner-box">
                                     <div class="content">
                                     <span class="company-logo"><img
-                                        src="{{ $job['logo'] }}" alt></span>
-                                    <h4><a href="#">{{ $job['title'] }}</a></h4>
-                                    <p>{{ $job['description'] }}</p>
+                                        src="{{ $job->logo }}" alt></span>
+                                    <h4><a href="#">{{ $job->title }}</a></h4>
+                                    <p>{{ $job->description }}</p>
                                     <ul class="job-info">
                                         <li><span class="icon flaticon-briefcase"></span>
                                         Segment</li>

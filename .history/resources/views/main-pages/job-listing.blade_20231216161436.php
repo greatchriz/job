@@ -228,7 +228,14 @@
 
                         <!-- ls Switcher -->
                         <div class="ls-switcher">
-
+                        <div class="showing-result">
+                            <div class="text">Showing
+                                <strong>
+                                    {{-- display $jobs  current page number --}}
+                                    {{ $jobs->currentPage() }}
+                                </strong> of <strong>{{ $jobs->count() }}</strong>
+                            jobs</div>
+                        </div>
                         <div class="sort-by">
                             <select class="chosen-select">
                             <option>New Jobs</option>
@@ -256,9 +263,9 @@
                                 <div class="inner-box">
                                     <div class="content">
                                     <span class="company-logo"><img
-                                        src="{{ $job['logo'] }}" alt></span>
-                                    <h4><a href="#">{{ $job['title'] }}</a></h4>
-                                    <p>{{ $job['description'] }}</p>
+                                        src="{{ $job->logo }}" alt></span>
+                                    <h4><a href="#">{{ $job->title }}</a></h4>
+                                    <p>{{ $job->description }}</p>
                                     <ul class="job-info">
                                         <li><span class="icon flaticon-briefcase"></span>
                                         Segment</li>
@@ -282,6 +289,53 @@
                         @endforeach
 
                         {{-- {{ $jobs->links() }} --}}
+
+
+                        <!-- Listing Show More -->
+                        <!--<div class="ls-show-more">
+                            <p>Showing {{ $jobs->count() }} of {{ $totalJobs }} Jobs</p>
+                            {{-- using @case i want to say if the current page is 1 display 10% and if the current page is 2 display 20% and so on --}}
+
+                            @switch($jobs->currentPage())
+                                @case(1)
+                                    @php
+                                        $percentage = 10;
+                                    @endphp
+                                @break
+                                @case(2)
+                                    @php
+                                        $percentage = 20;
+                                    @endphp
+                                @break
+                                @case(3)
+                                    @php
+                                        $percentage = 30;
+                                    @endphp
+                                @break
+                                @case(4)
+                                    @php
+                                        $percentage = 40;
+                                    @endphp
+                                @break
+                                @case(5)
+                                    @php
+                                        $percentage = 50;
+                                    @endphp
+                                @break
+                                @case(6)
+                                    @php
+                                        $percentage = 60;
+                                    @endphp
+                                @break
+                                @default
+                                    @php
+                                        $percentage = 0;
+                                    @endphp
+                            @endswitch
+
+                            <div class="bar"><span class="bar-inner" style="width: {{ $percentage }}%"></span></div>
+                            <button class="show-more">Show More</button>
+                        </div>-->
                     </div>
                     </div>
                 </div>

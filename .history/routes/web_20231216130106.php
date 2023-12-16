@@ -40,9 +40,6 @@ Route::get('/contact-us', [\App\Http\Controllers\MainPageController::class, 'con
 
 Route::get('/job-listing', [\App\Http\Controllers\MainPageController::class, 'jobListing'])->name('job-listing');
 
-//jobsDetails
-Route::get('/jobs-details', [\App\Http\Controllers\MainPageController::class, 'jobsDetails'])->name('jobs-details');
-
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -74,7 +71,10 @@ Route::middleware([
     Route::post('/visa-apply', [\App\Http\Controllers\VisaController::class, 'store'])->name('visas.store');
 });
 
-
+// jobs-details function route no controller dont pass id
+Route::get('/jobs-details', function () {
+    // Your code here
+});
 
 
 
