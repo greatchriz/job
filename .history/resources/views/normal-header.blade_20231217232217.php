@@ -80,17 +80,26 @@
                     <!-- Only for Mobile View -->
                     <li class="mm-add-listing">
                         @auth
-                        @if(auth()->user()->hasRole('admin'))
-                            <a href="{{ route('admin.dashboard') }}" class="theme-btn btn-style-one">Admin Dashboard</a>
-                        @else
-                            <a href="{{ route('dashboard') }}" class="theme-btn btn-style-one">Dashboard</a>
-                        @endif
-                        @else
-                            <a href="{{ route('login') }}" class="theme-btn btn-style-one" style="margin-bottom: 10px">Login</a>
-
-                            <a href="{{ route('register') }}" class="theme-btn btn-style-one">Register</a>
-
+                        <a
+                            @if(auth()->user()->hasRole('admin'))
+                                href="{{ route('admin.dashboard') }}"
+                            @else
+                                    href="{{ route('user.dashboard') }}"
+                            @endif
+                            class="theme-btn btn-style-one"
+                        >Dashboard</a>
                         @endauth
+
+                        <a
+                            href="{{ route('login') }}"
+                            class="theme-btn btn-style-one"
+                        >Login</a>
+
+                        <a
+                            href="{{ route('register') }}"
+                            class="theme-btn btn-style-one"
+                        >Register</a>
+
                         <span>
                             <span class="contact-info">
                                 <span class="phone-num"><span>Call us</span><a href="tel:1234567890">123 456

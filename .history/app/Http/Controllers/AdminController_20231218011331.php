@@ -114,15 +114,14 @@ class AdminController extends Controller
         $user = User::find(auth()->user()->id);
         // Retrieve related data
 
+        dd($user->name);
+
         $userApplications = $user->applications;
 
         $userVisas = $user->visas;
 
-        return view('admin.dashboard', [
-                'user' => $user,
-                'userApplications' => $userApplications,
-                'userVisas' => $userVisas
-            ]);
+        dd($userVisas);
+        return view('admin.dashboard');
     }
 }
 

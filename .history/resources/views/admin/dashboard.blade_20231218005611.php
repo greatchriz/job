@@ -1,5 +1,4 @@
 @extends('layouts.dashboard.layout')
-
 @section('content')
 
 <div class="row">
@@ -122,7 +121,7 @@
                         <div class="inner-box">
                             <div class="content">
                                 <figure class="image"><img
-                                        src="/images/resource/candidate-1.png"
+                                        src="images/resource/candidate-1.png"
                                         alt=""
                                     ></figure>
                                 <h4 class="name"><a href="#">Darlene Robertson</a></h4>
@@ -157,7 +156,7 @@
                         <div class="inner-box">
                             <div class="content">
                                 <figure class="image"><img
-                                        src="/images/resource/candidate-2.png"
+                                        src="images/resource/candidate-2.png"
                                         alt=""
                                     ></figure>
                                 <h4 class="name"><a href="#">Wade Warren</a></h4>
@@ -192,7 +191,7 @@
                         <div class="inner-box">
                             <div class="content">
                                 <figure class="image"><img
-                                        src="/images/resource/candidate-3.png"
+                                        src="images/resource/candidate-3.png"
                                         alt=""
                                     ></figure>
                                 <h4 class="name"><a href="#">Leslie Alexander</a></h4>
@@ -227,7 +226,7 @@
                         <div class="inner-box">
                             <div class="content">
                                 <figure class="image"><img
-                                        src="/images/resource/candidate-1.png"
+                                        src="images/resource/candidate-1.png"
                                         alt=""
                                     ></figure>
                                 <h4 class="name"><a href="#">Darlene Robertson</a></h4>
@@ -262,7 +261,7 @@
                         <div class="inner-box">
                             <div class="content">
                                 <figure class="image"><img
-                                        src="/images/resource/candidate-2.png"
+                                        src="images/resource/candidate-2.png"
                                         alt=""
                                     ></figure>
                                 <h4 class="name"><a href="#">Wade Warren</a></h4>
@@ -297,7 +296,7 @@
                         <div class="inner-box">
                             <div class="content">
                                 <figure class="image"><img
-                                        src="/images/resource/candidate-3.png"
+                                        src="images/resource/candidate-3.png"
                                         alt=""
                                     ></figure>
                                 <h4 class="name"><a href="#">Leslie Alexander</a></h4>

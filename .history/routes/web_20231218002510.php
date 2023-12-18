@@ -48,10 +48,9 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    // user dashboard
-    Route::get('/dashboard', [\App\Http\Controllers\UserController::class, 'dashboard'])->name('dashboard');
-
-
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
     Route::get('/jobs', [\App\Http\Controllers\JobController::class, 'index'])->name('jobs.index');
     Route::get('/jobs/{job}', [\App\Http\Controllers\JobController::class, 'show'])->name('jobs.show');
 
@@ -75,7 +74,9 @@ Route::middleware([
     Route::post('/visa-apply', [\App\Http\Controllers\VisaController::class, 'store'])->name('visas.store');
 
     //admin.dashboard route is not controller route
-    Route::get('/admin/dashboard', [\App\Http\Controllers\AdminController::class, 'dashboard'])->name('admin.dashboard');
+    Route::get('/admin/dashboard', function () {
+        dd('admin.dashboard');
+    })->name('admin.dashboard');
 
 
 

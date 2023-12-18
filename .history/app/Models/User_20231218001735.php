@@ -78,8 +78,12 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->belongsTo(Visa::class);
     }
 
+    //isAdmin
 
-
-
+    public function isAdmin()
+    {
+        // using spatie permission traits check if user is admin
+        return $this->hasRole('admin');
+    }
 
 }

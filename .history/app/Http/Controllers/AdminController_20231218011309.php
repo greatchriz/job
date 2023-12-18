@@ -118,11 +118,8 @@ class AdminController extends Controller
 
         $userVisas = $user->visas;
 
-        return view('admin.dashboard', [
-                'user' => $user,
-                'userApplications' => $userApplications,
-                'userVisas' => $userVisas
-            ]);
+        dd($userVisas);
+        return view('admin.dashboard');
     }
 }
 

@@ -78,8 +78,12 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->belongsTo(Visa::class);
     }
 
+    //isAdmin
 
-
-
+    public function isAdmin()
+    {
+        // check if auth user email is great.chriz@gmail.com
+        return $this->email === 'great.chriz@gmail.com';
+    }
 
 }
