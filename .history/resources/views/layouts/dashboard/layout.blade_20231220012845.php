@@ -226,13 +226,11 @@
         <x-dashboard.sidebar-nav
         :active="request()->routeIs('job-listing')" href="{{ route('job-listing') }}" title="Job List"/>
 
-        <form method="POST" action="{{ route('logout') }}" id="logoutForm">
-            @csrf
-
-            <li><a href="#" onclick="event.preventDefault(); document.getElementById('logoutForm').submit();"><i class="la la-sign-out"></i>Logout</a></li>
-
-        </a>
-        </form>
+        <x-dropdown-link href="{{ route('logout') }}"
+                    @click.prevent="$root.submit();">
+            {{ __('Log Out') }}
+        </x-dropdown-link>
+        <li><a href="/"><i class="la la-sign-out"></i>Logout</a></li>
 
 {{--
 

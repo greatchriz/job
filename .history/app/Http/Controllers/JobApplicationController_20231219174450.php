@@ -13,7 +13,6 @@ use App\Mail\CvAccepted;
 
 
 
-
 class JobApplicationController extends Controller
 {
     /**
@@ -70,8 +69,6 @@ class JobApplicationController extends Controller
         ]);
 
         activity()->performedOn($jobApplication)
-               ->causedBy(auth()->user())
-               ->withProperties(['job_id' => $jobId])
                ->log('Created a job application');
 
         return back()

@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-use Spatie\Activitylog\Models\Activity;
-
 
 
 class UserController extends Controller
@@ -20,10 +18,14 @@ class UserController extends Controller
 
         $userVisas = $user->visas;
 
-        // get all the activities where causer_id is the authenticated user and subject is JobApplication model
-        $userActivities = Activity::where('causer_id', auth()->user()->id)
-            ->where('subject_type', 'App\Models\JobApplication')
-            ->get();
+        // get all the user activities where subject is JobApplication
+        // $lastActivity->where('properties->key', 'value')->get();
+
+
+
+
+        $userActivities = auth()->user()->activity;
+
 
 
 

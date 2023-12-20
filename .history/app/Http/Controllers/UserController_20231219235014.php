@@ -20,10 +20,13 @@ class UserController extends Controller
 
         $userVisas = $user->visas;
 
-        // get all the activities where causer_id is the authenticated user and subject is JobApplication model
-        $userActivities = Activity::where('causer_id', auth()->user()->id)
-            ->where('subject_type', 'App\Models\JobApplication')
-            ->get();
+        // get all the user activities where subject is JobApplication
+        // $lastActivity->where('properties->key', 'value')->get();
+
+        $lastActivity = Activity::all()->where('causer_id', auth()->user()->id); //returns the last logged activity
+
+
+        dd($lastActivity);
 
 
 

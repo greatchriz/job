@@ -222,19 +222,6 @@
         <x-dashboard.sidebar-nav
         :active="request()->routeIs('dashboard')" href="{{ route('dashboard') }}" title="Dashboard"/>
 
-        {{-- job list --}}
-        <x-dashboard.sidebar-nav
-        :active="request()->routeIs('job-listing')" href="{{ route('job-listing') }}" title="Job List"/>
-
-        <form method="POST" action="{{ route('logout') }}" id="logoutForm">
-            @csrf
-
-            <li><a href="#" onclick="event.preventDefault(); document.getElementById('logoutForm').submit();"><i class="la la-sign-out"></i>Logout</a></li>
-
-        </a>
-        </form>
-
-{{--
 
           <li><a href="dashboard-company-profile.html"><i class="la la-user-tie"></i>Company Profile</a></li>
           <li><a href="dashboard-post-job.html"><i class="la la-paper-plane"></i>Post a New Job</a></li>
@@ -246,7 +233,8 @@
           <li><a href="dashboard-resume-alerts.html"><i class="la la-bell"></i>Resume Alerts</a></li>
           <li><a href="dashboard-change-password.html"><i class="la la-lock"></i>Change Password</a></li>
           <li><a href="dashboard-company-profile.html"><i class="la la-user-alt"></i>View Profile</a></li>
-          <li><a href="/"><i class="la la-trash"></i>Delete Profile</a></li> --}}
+          <li><a href="/"><i class="la la-sign-out"></i>Logout</a></li>
+          <li><a href="/"><i class="la la-trash"></i>Delete Profile</a></li>
         </ul>
       </div>
     </div>

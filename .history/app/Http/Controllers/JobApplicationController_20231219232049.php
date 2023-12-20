@@ -70,8 +70,8 @@ class JobApplicationController extends Controller
         ]);
 
         activity()->performedOn($jobApplication)
-               ->causedBy(auth()->user())
                ->withProperties(['job_id' => $jobId])
+               ->logName('job_application')
                ->log('Created a job application');
 
         return back()

@@ -13,7 +13,7 @@
 
 <div class="row">
 
-    <x-dashboard.ui-item uiColor="ui-red" uiIcon="la-file-invoice" uiTitle="Jobs Applied" uiValue="{{ $userActivities->count() }}" />
+    <x-dashboard.ui-item uiColor="ui-red" uiIcon="la-file-invoice" uiTitle="Applications" uiValue="{{ $userActivities->count() }}" />
 
     <div class="ui-block col-xl-3 col-lg-6 col-md-6 col-sm-12">
         <div class="ui-item ui-yellow">

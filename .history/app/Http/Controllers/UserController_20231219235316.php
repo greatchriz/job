@@ -25,6 +25,9 @@ class UserController extends Controller
             ->where('subject_type', 'App\Models\JobApplication')
             ->get();
 
+            dd($userActivities);
+
+
 
 
         return view('user.dashboard',

@@ -12,9 +12,28 @@
 @section('content')
 
 <div class="row">
-
-    <x-dashboard.ui-item uiColor="ui-red" uiIcon="la-file-invoice" uiTitle="Jobs Applied" uiValue="{{ $userActivities->count() }}" />
-
+    <div class="ui-block col-xl-3 col-lg-6 col-md-6 col-sm-12">
+        <div class="ui-item">
+            <div class="left">
+                <i class="icon flaticon-briefcase"></i>
+            </div>
+            <div class="right">
+                <h4>22</h4>
+                <p>Posted Jobs</p>
+            </div>
+        </div>
+    </div>
+    <div class="ui-block col-xl-3 col-lg-6 col-md-6 col-sm-12">
+        <div class="ui-item ui-red">
+            <div class="left">
+                <i class="icon la la-file-invoice"></i>
+            </div>
+            <div class="right">
+                <h4>{{ $userActivities->count() }}</h4>
+                <p>Application</p>
+            </div>
+        </div>
+    </div>
     <div class="ui-block col-xl-3 col-lg-6 col-md-6 col-sm-12">
         <div class="ui-item ui-yellow">
             <div class="left">
