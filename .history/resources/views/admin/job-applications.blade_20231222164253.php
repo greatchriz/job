@@ -66,7 +66,7 @@
                                         @csrf
                                         @method('put')
 
-                                        <a href="#" onclick="event.preventDefault(); document.getElementById('job-rejected').submit();"
+                                        <a href="#" onclick="event.preventDefault(); document.getElementById('job-rejected').submit();"                                     class="theme-btn btn-style-four"
                                         class="theme-btn btn-style-two">
                                         Reject Application</a>
                                         <button class="bookmark-btn"><i class="flaticon-bookmark"></i></button>
@@ -82,7 +82,7 @@
                                     @csrf
                                     @method('put')
 
-                                    <a href="#" onclick="event.preventDefault(); document.getElementById('job-approved').submit();"
+                                    <a href="#" onclick="event.preventDefault(); document.getElementById('job-approved').submit();"                                     class="theme-btn btn-style-four"
                                     class="theme-btn btn-style-four">
                                     Approve Application</a>
                                     <button class="bookmark-btn"><i class="flaticon-bookmark"></i></button>
@@ -91,20 +91,7 @@
 
                             </div>
                         </div>
-                        @else
 
-                        <div class="col-3" style="margin: 5px">
-                            <div class="btn-box">
-                                <form action="/job-applications/{{ $job->id }}/update" method="post" id="job-approved">
-                                    @csrf
-                                    @method('put')
-
-                                    <a href="#" onclick="event.preventDefault(); document.getElementById('job-approved').submit();"
-                                    class="theme-btn btn-style-four">
-                                    Approve Application</a>
-                                    <button class="bookmark-btn"><i class="flaticon-bookmark"></i></button>
-                                </form>
-                            </div>
                         @endif
 
                     </div>

@@ -176,7 +176,7 @@ class JobApplicationController extends Controller
         $confirmedApplication = $jobApplication->rejectApplication();
 
         //return back with message
-        return back()->with('success', 'Application has been rejected');
+        return back()->with('success', 'Application has been accepted');
 
 
     }

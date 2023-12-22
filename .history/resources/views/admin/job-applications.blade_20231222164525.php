@@ -99,12 +99,11 @@
                                     @csrf
                                     @method('put')
 
-                                    <a href="#" onclick="event.preventDefault(); document.getElementById('job-approved').submit();"
+                                    <a href="#" onclick="event.preventDefault(); document.getElementById('job-approved').submit();"                                     class="theme-btn btn-style-four"
                                     class="theme-btn btn-style-four">
                                     Approve Application</a>
                                     <button class="bookmark-btn"><i class="flaticon-bookmark"></i></button>
-                                </form>
-                            </div>
+
                         @endif
 
                     </div>

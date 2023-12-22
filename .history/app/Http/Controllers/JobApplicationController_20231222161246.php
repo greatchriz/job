@@ -168,15 +168,15 @@ class JobApplicationController extends Controller
 
         activity()->performedOn($jobApplication->user)
                ->causedBy($jobApplication->user)
-               ->withProperties(['mailClass' => CvRejected::class, 'jobApplicationData' => $jobApplicationData, 'activity_type' => 'message'])
-               ->log('Your application has been rejected');
+               ->withProperties(['mailClass' => CvAccepted::class, 'jobApplicationData' => $jobApplicationData, 'activity_type' => 'message'])
+               ->log('Job application has been accepted');
 
 
         // update the job application's status to accepted
-        $confirmedApplication = $jobApplication->rejectApplication();
+        $confirmedApplication = $jobApplication->confirmApplication();
 
         //return back with message
-        return back()->with('success', 'Application has been rejected');
+        return back()->with('success', 'Application has been accepted');
 
 
     }
