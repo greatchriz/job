@@ -40,12 +40,14 @@
                     </ul>
                     <ul class="job-other-info">
                         {{-- if job status is approved --}}
-                        @if ($job->status == 'accepted')
+                        @if ($job->status == 'approved')
                         <li class="privacy">Approved</li>
                         @elseif($job->status == 'pending')
                         <li class="time">Pending</li>
                         @elseif($job->status == 'rejected')
                         <li class="required">Rejected</li>
+                        @else
+                            <li class="time">None</li>
                         @endif
                     </ul>
                     <button class="bookmark-btn"><span

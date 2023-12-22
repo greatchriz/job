@@ -133,7 +133,7 @@ class JobApplicationController extends Controller
 
 
         // update the job application's status to accepted
-        $confirmedApplication = $jobApplication->confirmApplication();
+        $confirmedApplication = $jobApplication->confirmStatus();
 
         //return back with message
         return back()->with('success', 'Application has been accepted');

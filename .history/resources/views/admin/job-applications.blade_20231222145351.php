@@ -3,9 +3,10 @@
 @section('upper-title')
 
 <div class="upper-title-box">
-    <h3>List of Jobs You Applied For</h3>
+    <h3>List of all Job Applications</h3>
     <div class="text">
-        Applied Jobs List
+        Jobs Applications
+
     </div>
 </div>
 
@@ -14,7 +15,7 @@
 @section('content')
     <div class="row">
         <!-- Job Block -->
-        @forelse ($userApplications as $job)
+        @forelse ($jobApplications as $job)
             <!-- Job Block -->
             <div class="job-block" style="cursor: pointer">
                 <div class="inner-box">

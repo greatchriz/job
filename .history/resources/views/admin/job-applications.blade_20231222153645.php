@@ -3,9 +3,10 @@
 @section('upper-title')
 
 <div class="upper-title-box">
-    <h3>List of Jobs You Applied For</h3>
+    <h3>List of all Job Applications</h3>
     <div class="text">
-        Applied Jobs List
+        Jobs Applications
+
     </div>
 </div>
 
@@ -14,7 +15,7 @@
 @section('content')
     <div class="row">
         <!-- Job Block -->
-        @forelse ($userApplications as $job)
+        @forelse ($jobApplications as $job)
             <!-- Job Block -->
             <div class="job-block" style="cursor: pointer">
                 <div class="inner-box">
@@ -43,7 +44,7 @@
                         @if ($job->status == 'accepted')
                         <li class="privacy">Approved</li>
                         @elseif($job->status == 'pending')
-                        <li class="time">Pending</li>
+                        <li class="required">Pending</li>
                         @elseif($job->status == 'rejected')
                         <li class="required">Rejected</li>
                         @endif
@@ -57,16 +58,40 @@
 
                     </blockquote> --}}
 
-                    <div class="col-3" style="margin: 5px">
-                        <div class="btn-box">
+                    <div class="row">
+                        @if($job->status == 'accepted')
+                            <div class="col-3" style="margin-right: 35px">
+                                <div class="btn-box">
 
-                            <a
-                                href="/jobs/{{ $job->job->id }}"
-                                class="theme-btn btn-style-three"
-                            >View Job</a>
-                            <button class="bookmark-btn"><i class="flaticon-bookmark"></i></button>
+                                    <a
+                                        href="/job-applications/{{ $job->id }}/update"
+                                        class="theme-btn btn-style-two"
+                                    >Cancel Job</a>
+                                    <button class="bookmark-btn"><i class="flaticon-bookmark"></i></button>
+                                </div>
+                            </div>
+                        @elseif($job->status == 'pending')
+                        <div class="col-3" style="margin: 5px">
+
+                            <div class="btn-box">
+                                <form action="/job-applications/{{ $job->id }}/update" method="post" id="job-approved">
+                                    @csrf
+                                    @method('put')
+
+                                    <a href="#" onclick="event.preventDefault(); document.getElementById('logoutForm').submit();"                                     class="theme-btn btn-style-four"
+                                    class="theme-btn btn-style-four">
+                                    >Approve Job</a>
+                                    <button class="bookmark-btn"><i class="flaticon-bookmark"></i></button>
+
+                                </form>
+
+                            </div>
                         </div>
+
+                        @endif
+
                     </div>
+
 
                 </div>
 

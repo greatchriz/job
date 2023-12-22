@@ -3,9 +3,10 @@
 @section('upper-title')
 
 <div class="upper-title-box">
-    <h3>List of Jobs You Applied For</h3>
+    <h3>List of all Job Applications</h3>
     <div class="text">
-        Applied Jobs List
+        Jobs Applications
+
     </div>
 </div>
 
@@ -14,7 +15,7 @@
 @section('content')
     <div class="row">
         <!-- Job Block -->
-        @forelse ($userApplications as $job)
+        @forelse ($jobApplications as $job)
             <!-- Job Block -->
             <div class="job-block" style="cursor: pointer">
                 <div class="inner-box">
@@ -57,16 +58,34 @@
 
                     </blockquote> --}}
 
-                    <div class="col-3" style="margin: 5px">
-                        <div class="btn-box">
+                    <div class="row">
+                        @if($job->status == 'accepted')
+                            <div class="col-3" style="margin-right: 35px">
+                                <div class="btn-box">
 
-                            <a
-                                href="/jobs/{{ $job->job->id }}"
-                                class="theme-btn btn-style-three"
-                            >View Job</a>
-                            <button class="bookmark-btn"><i class="flaticon-bookmark"></i></button>
+                                    <a
+                                        href="/jobs/{{ $job->job->id }}"
+                                        class="theme-btn btn-style-one"
+                                    >Cancel Job</a>
+                                    <button class="bookmark-btn"><i class="flaticon-bookmark"></i></button>
+                                </div>
+                            </div>
+                        @elseif($job->status == 'pending')
+                        <div class="col-3" style="margin: 5px">
+                            <div class="btn-box">
+
+                                <a
+                                    href="/jobs/{{ $job->job->id }}"
+                                    class="theme-btn btn-style-two"
+                                >Approve Job</a>
+                                <button class="bookmark-btn"><i class="flaticon-bookmark"></i></button>
+                            </div>
                         </div>
+
+                        @endif
+
                     </div>
+
 
                 </div>
 

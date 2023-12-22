@@ -40,22 +40,24 @@
                     </ul>
                     <ul class="job-other-info">
                         {{-- if job status is approved --}}
-                        @if ($job->status == 'accepted')
+                        @if ($job->job->status == 'approved')
                         <li class="privacy">Approved</li>
-                        @elseif($job->status == 'pending')
+                        @elseif($job->job->status == 'pending')
                         <li class="time">Pending</li>
-                        @elseif($job->status == 'rejected')
+                        @elseif($job->job->status == 'rejected')
                         <li class="required">Rejected</li>
+                        @else
+                            <li class="time">None</li>
                         @endif
                     </ul>
                     <button class="bookmark-btn"><span
                         class="flaticon-bookmark"></span></button>
                     </div>
 
-                    {{-- <blockquote class="blockquote-style-one mb-2 mt-2" style="padding: 5px">
+                    <blockquote class="blockquote-style-one mb-2 mt-2" style="padding: 5px">
                         <p style="font-weight: 500">The offer expires on {{ \Carbon\Carbon::parse($job->deadline)->toFormattedDayDateString() }}</p>
 
-                    </blockquote> --}}
+                    </blockquote>
 
                     <div class="col-3" style="margin: 5px">
                         <div class="btn-box">

@@ -40,7 +40,7 @@
                     </ul>
                     <ul class="job-other-info">
                         {{-- if job status is approved --}}
-                        @if ($job->status == 'accepted')
+                        @if ($job->status == 'approved')
                         <li class="privacy">Approved</li>
                         @elseif($job->status == 'pending')
                         <li class="time">Pending</li>

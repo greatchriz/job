@@ -26,16 +26,8 @@ class JobApplication extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function confirmApplication()
+    public function confirm()
     {
-
-        $this->update(['status' => 'accepted']);
+        $this->update(['status' => true]);
     }
-
-    public function rejectApplication()
-    {
-
-        $this->update(['status' => 'rejected']);
-    }
-
 }

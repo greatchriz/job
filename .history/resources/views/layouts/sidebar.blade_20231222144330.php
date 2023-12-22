@@ -2,10 +2,10 @@
 {{-- if the logged in user is admin --}}
 @if(auth()->user()->hasRole('admin'))
 <x-dashboard.sidebar-nav
-:active="request()->routeIs('admin.job-applications')" href="{{ route('admin.job-applications') }}" title="Job Applications"/>
+:active="request()->routeIs('dashboard')" href="{{ route('dashboard') }}" title="Dashboard"/>
 
 <x-dashboard.sidebar-nav
-    :active="request()->routeIs('admin.form-inputs')" href="{{ route('admin.form-inputs') }}" title="Form Inputs"/>
+    :active="request()->routeIs('dashboard')" href="{{ route('dashboard') }}" title="Dashboard"/>
 
 
 @else
