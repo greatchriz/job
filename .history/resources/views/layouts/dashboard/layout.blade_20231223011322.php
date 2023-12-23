@@ -1,6 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-    @php
+
+{{--
+About Us:
+
+Meta Title: Polticventure: Who We Are and What We Do | Empowering Your Global Journey
+Meta Description: Discover Polticventure's mission, values, and team. Learn how we help individuals and businesses thrive in the international job market.
+Meta Keywords: Polticventure, about us, mission statement, values, team, global mobility, job seekers, employers, relocation assistance
+Recommended Image: A group photo of the Polticventure team, showcasing diversity and professionalism.
+Contact Us:
+
+Meta Title: Get in Touch with Polticventure: We're Here to Help
+Meta Description: Have questions or need assistance? Reach out to our friendly team for personalized support.
+Meta Keywords: contact Polticventure, customer support, inquiries, relocation advice, job search help
+Recommended Image: A map with markers indicating Polticventure's global offices or a contact form icon.
+Blog:
+
+Meta Title: Polticventure Blog: Insights for Your Global Career | Explore Now
+Meta Description: Dive into expert tips, industry trends, and inspiring stories to navigate the international job market and relocation process successfully.
+Meta Keywords: Polticventure blog, career advice, relocation tips, international job market, expat life
+Recommended Image: A collage of blog post thumbnails with captivating titles and visuals.
+Job Listing:
+
+Meta Title: Find Your Dream Job Abroad | Explore Global Opportunities with Polticventure
+Meta Description: Browse thousands of exciting job opportunities worldwide. Start your journey to a fulfilling career abroad today!
+Meta Keywords: international jobs, job search, overseas careers, Polticventure job board, career opportunities
+Recommended Image: A visual depicting a globe with job icons scattered across different continents.
+Services:
+
+Meta Title: Your Global Mobility Partner: Polticventure Services
+Meta Description: Simplify your relocation with our comprehensive services, including Visa applications, Residency permits, flights, accommodation, and more.
+Meta Keywords: Visa application, Residency permit, relocation services, flights, hotels, apartments, car rentals, Polticventure services
+Recommended Image: A visually appealing graphic illustrating the various services offered by Polticventure, such as icons for passports, flights, and apartments.
+Terms:
+
+Meta Title: Polticventure Terms of Service: Read Before Using Our Platform
+Meta Description: Ensure a smooth and compliant experience by understanding Polticventure's terms of service.
+Meta Keywords: Polticventure terms, terms of service, user agreement, legal terms
+Recommended Image: An image representing a contract or legal document.
+Privacy Policy:
+
+Privacy Policy: Your Data is Secure: Polticventure Privacy Policy
+Meta Description: Learn how Polticventure protects your personal information and respects your privacy.
+Meta Keywords: Polticventure privacy policy, data protection, privacy, user data
+Recommended Image: An image representing a shield or a lock symbolizing data protection. --}}
+
+
+
+@php
     $pagesmeta = [
         [
             'url' => route('home'),
@@ -66,67 +113,41 @@
             'ogImage' => 'https://polticventure.co/images/index-13/header/test.png',
         ]
 
+        [
+            'url' => route('privacy-policy'),
+            'title' => 'Your Data is Secure: Polticventure Privacy Policy.',
+            'description' => 'Learn how Polticventure protects your personal information and respects your privacy.',
+            'keywords' => 'privacy policy, data protection, privacy, user data, Polticventure privacy',
+            'ogImage' => 'https://polticventure.co/images/index-13/header/test.png',
+        ]
+
     ];
 
-    // $page is the array above where the url matches the current url
     $page = $pagesmeta[array_search(url()->current(), array_column($pagesmeta, 'url'))];
 
-    // if $page is empty, set it to the first page
-    if (empty($page)) {
-        $page = $pagesmeta[0];
-    }
+    dd($page);
 
 @endphp
 
 
-
+<!-- Mirrored from creativelayers.net/themes/superio/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Dec 2023 07:35:24 GMT -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $page['title'] }}</title>
-    <meta name="description" content="{{ $page['description'] }}">
-    <meta name="keywords" content="{{ $page['keywords'] }}">
+  <meta charset="utf-8">
+  <title>Superio | Just another HTML Template | Dashboard</title>
 
-    <meta property="og:title" content="{{ $page['title'] }}">
-    <meta property="og:description" content="{{ $page['description'] }}">
-    <meta property="og:image" content="{{ $page['ogImage'] }}">
-    <meta property="og:url" content="{{ $page['url'] }}">
-    <meta property="og:type" content="website">
+  <!-- Stylesheets -->
+  <link href="/css/bootstrap.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/responsive.css" rel="stylesheet">
 
-    <!-- Stylesheets -->
-    <link
-    href="/css/bootstrap.css"
-    rel="stylesheet"
-    >
-    <link
-        href="/css/style.css"
-        rel="stylesheet"
-    >
-    <link
-        href="/css/responsive.css"
-        rel="stylesheet"
-    >
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
 
-    <link
-        rel="shortcut icon"
-        href="/images/favicon.png"
-        type="image/x-icon"
-    >
-    <link
-        rel="icon"
-        href="/images/favicon.png"
-        type="image/x-icon"
-    >
-
-    <!-- Responsive -->
-    <meta
-        http-equiv="X-UA-Compatible"
-        content="IE=edge"
-    >
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-    >
+  <!-- Responsive -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+  <!--[if lt IE 9]><script src="/js/respond.js"></script><![endif]-->
 </head>
 
 <body>
@@ -237,7 +258,7 @@
 
 <!-- Copyright -->
 <div class="copyright-text">
-  <p>© 2023 Polticventure. All Right Reserved.</p>
+  <p>© 2021 Superio. All Right Reserved.</p>
 </div>
 
 </div><!-- End Page Wrapper -->

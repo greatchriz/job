@@ -237,7 +237,7 @@
 
 <!-- Copyright -->
 <div class="copyright-text">
-  <p>© 2023 Polticventure. All Right Reserved.</p>
+  <p>© 2021 Superio. All Right Reserved.</p>
 </div>
 
 </div><!-- End Page Wrapper -->

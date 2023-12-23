@@ -60,7 +60,7 @@
         ],
 
         [
-            'url' => route('privacy-policy'),
+            'url' => route('privacy'),
             'title' => 'Your Data is Secure: Polticventure Privacy Policy.',
             'description' => 'Learn how Polticventure protects your personal information and respects your privacy.',
             'keywords' => 'privacy policy, data protection, privacy, user data, Polticventure privacy',
@@ -72,11 +72,7 @@
     // $page is the array above where the url matches the current url
     $page = $pagesmeta[array_search(url()->current(), array_column($pagesmeta, 'url'))];
 
-    // if $page is empty, set it to the first page
-    if (empty($page)) {
-        $page = $pagesmeta[0];
-    }
-
+    dd($page);
 @endphp
 
 
@@ -84,15 +80,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $page['title'] }}</title>
-    <meta name="description" content="{{ $page['description'] }}">
-    <meta name="keywords" content="{{ $page['keywords'] }}">
+    <title>Polticventure: Your Gateway to Opportunity and Mobility</title>
+    <meta name="description" content="Find your dream job abroad, navigate Visa and Residency applications, and plan your relocation with Polticventure's comprehensive suite of services.">
+    <meta name="keywords" content="job board, overseas jobs, Visa application, Residency permit, relocation services, flights, hotels, apartments, car rentals, Polticventure">
 
-    <meta property="og:title" content="{{ $page['title'] }}">
-    <meta property="og:description" content="{{ $page['description'] }}">
-    <meta property="og:image" content="{{ $page['ogImage'] }}">
-    <meta property="og:url" content="{{ $page['url'] }}">
+    <meta property="og:title" content="Polticventure: Your Gateway to Opportunity and Mobility">
+    <meta property="og:description" content="Find your dream job abroad, navigate Visa and Residency applications, and plan your relocation with Polticventure's comprehensive suite of services.">
+    <meta property="og:image" content="https://www.pinterest.com/pin/technology-solution-company-proven-process-diagram-illustration-or-graphics-contest-sponsored-winning--609252655824295098/">
+    <meta property="og:url" content="https://e-polinvest.pl/en/home/">
     <meta property="og:type" content="website">
+
+    <meta name="twitter:title" content="Polticventure: Your Gateway to Opportunity and Mobility">
+    <meta name="twitter:description" content="Find your dream job abroad, navigate Visa and Residency applications, and plan your relocation with Polticventure's comprehensive suite of services.">
+    <meta name="twitter:image" content="https://www.pinterest.com/pin/technology-solution-company-proven-process-diagram-illustration-or-graphics-contest-sponsored-winning--609252655824295098/">
+    <meta name="twitter:card" content="summary_large_image">
 
     <!-- Stylesheets -->
     <link
@@ -132,6 +133,47 @@
 
     <!-- Mirrored from creativelayers.net/themes/superio/index-13.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Dec 2023 07:35:01 GMT -->
 
+    <head>
+        <meta charset="utf-8">
+        <title>Superio | Just another HTML Template | Home Page 11</title>
+
+        <!-- Stylesheets -->
+        <link
+            href="/css/bootstrap.css"
+            rel="stylesheet"
+        >
+        <link
+            href="/css/style.css"
+            rel="stylesheet"
+        >
+        <link
+            href="/css/responsive.css"
+            rel="stylesheet"
+        >
+
+        <link
+            rel="shortcut icon"
+            href="/images/favicon.png"
+            type="image/x-icon"
+        >
+        <link
+            rel="icon"
+            href="/images/favicon.png"
+            type="image/x-icon"
+        >
+
+        <!-- Responsive -->
+        <meta
+            http-equiv="X-UA-Compatible"
+            content="IE=edge"
+        >
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+        >
+        <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+        <!--[if lt IE 9]><script src="/js/respond.js"></script><![endif]-->
+    </head>
 
     <body data-anm=".anm">
 
@@ -243,7 +285,7 @@
                 <div class="footer-bottom">
                     <div class="auto-container">
                         <div class="outer-box">
-                            <div class="copyright-text">© 2023 <a href="polticventure.co">Polticventure</a>. All Right Reserved.</div>
+                            <div class="copyright-text">© 2021 <a href="#">Superio</a>. All Right Reserved.</div>
                             <div class="social-links">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#"><i class="fab fa-twitter"></i></a>

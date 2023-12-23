@@ -72,11 +72,6 @@
     // $page is the array above where the url matches the current url
     $page = $pagesmeta[array_search(url()->current(), array_column($pagesmeta, 'url'))];
 
-    // if $page is empty, set it to the first page
-    if (empty($page)) {
-        $page = $pagesmeta[0];
-    }
-
 @endphp
 
 
@@ -88,11 +83,16 @@
     <meta name="description" content="{{ $page['description'] }}">
     <meta name="keywords" content="{{ $page['keywords'] }}">
 
-    <meta property="og:title" content="{{ $page['title'] }}">
-    <meta property="og:description" content="{{ $page['description'] }}">
-    <meta property="og:image" content="{{ $page['ogImage'] }}">
-    <meta property="og:url" content="{{ $page['url'] }}">
+    <meta property="og:title" content="Polticventure: Your Gateway to Opportunity and Mobility">
+    <meta property="og:description" content="Find your dream job abroad, navigate Visa and Residency applications, and plan your relocation with Polticventure's comprehensive suite of services.">
+    <meta property="og:image" content="https://www.pinterest.com/pin/technology-solution-company-proven-process-diagram-illustration-or-graphics-contest-sponsored-winning--609252655824295098/">
+    <meta property="og:url" content="https://e-polinvest.pl/en/home/">
     <meta property="og:type" content="website">
+
+    <meta name="twitter:title" content="Polticventure: Your Gateway to Opportunity and Mobility">
+    <meta name="twitter:description" content="Find your dream job abroad, navigate Visa and Residency applications, and plan your relocation with Polticventure's comprehensive suite of services.">
+    <meta name="twitter:image" content="https://www.pinterest.com/pin/technology-solution-company-proven-process-diagram-illustration-or-graphics-contest-sponsored-winning--609252655824295098/">
+    <meta name="twitter:card" content="summary_large_image">
 
     <!-- Stylesheets -->
     <link
@@ -243,7 +243,7 @@
                 <div class="footer-bottom">
                     <div class="auto-container">
                         <div class="outer-box">
-                            <div class="copyright-text">© 2023 <a href="polticventure.co">Polticventure</a>. All Right Reserved.</div>
+                            <div class="copyright-text">© 2021 <a href="#">Superio</a>. All Right Reserved.</div>
                             <div class="social-links">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#"><i class="fab fa-twitter"></i></a>

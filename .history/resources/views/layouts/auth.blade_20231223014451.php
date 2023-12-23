@@ -82,25 +82,18 @@
         'url' => route('register'),
         'title' => 'Join Polticventure - Unlock Your Global Career Journey',
         'description' => 'Sign up for free and explore a world of possibilities with Polticventure. Find your dream job, navigate visa complexities, and settle seamlessly in your new destination.',
-        'keywords' => 'register, Polticventure, job search, visa application, relocation assistance',
-        'ogImage' => 'https://polticventure.co/images/index-13/header/test.png',
         ],
 
-        [
-        'url' => route('login'),
-        'title' => 'Welcome Back to Polticventure - Access Your Personalized Dashboard',
-        'description' => 'Log in to your Polticventure account and manage your job applications, track visa progress, and access relocation resources with ease.',
-        'keywords' => 'login, Polticventure, job search, visa application, relocation assistance',
-        'ogImage' => 'https://polticventure.co/images/index-13/header/test.png',
-
+                [
+                'url' => route('login'),
+                'title' => 'Welcome Back to Polticventure - Access Your Personalized Dashboard',
+                'description' => 'Log in to your Polticventure account and manage your job applications, track visa progress, and access relocation resources with ease.',
         ],
 
-        [
-        'url' => route('password.request'),
-        'title' => 'Recover Your Access - Reset Your Polticventure Password',
-        'description' => 'Don\'t worry if you\'ve forgotten your password. Enter your email address and we\'ll help you regain access to your Polticventure account.',
-        'keywords' => 'forgot password, Polticventure, job search, visa application, relocation assistance',
-        'ogImage' => 'https://polticventure.co/images/index-13/header/test.png',
+                [
+                'url' => route('forgot-password'),
+                'title' => 'Recover Your Access - Reset Your Polticventure Password',
+                'description' => 'Don\'t worry if you\'ve forgotten your password. Enter your email address and we\'ll help you regain access to your Polticventure account.',
         ],
 
         //dashboard page

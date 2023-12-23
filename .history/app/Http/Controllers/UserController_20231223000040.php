@@ -67,6 +67,7 @@ class UserController extends Controller
     {
         $user = User::find(auth()->user()->id);
         $userMessages = Activity::where('causer_id', $user)->where('properties->activity_type', 'message')->get();
+        dd($userMessages);
         return view('user.messages', ['userMessages' => $userMessages]);
     }
 

@@ -243,7 +243,7 @@
                 <div class="footer-bottom">
                     <div class="auto-container">
                         <div class="outer-box">
-                            <div class="copyright-text">© 2023 <a href="polticventure.co">Polticventure</a>. All Right Reserved.</div>
+                            <div class="copyright-text">© 2021 <a href="#">Superio</a>. All Right Reserved.</div>
                             <div class="social-links">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#"><i class="fab fa-twitter"></i></a>
