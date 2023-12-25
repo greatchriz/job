@@ -117,6 +117,15 @@
         ],
         'listHeader' => 'We offer professional assistance for several immigration processes, such as:',
 
+        // Applications under the Point-Based System
+        // Marriage and Family Visas
+        // Permanent residency and British citizenship applications
+        // Work permits and employment immigration services
+        // Deportation appeals, bail and detention matters
+        // Refugee and humanitarian protection enquiries
+        // Appeals and judicial review challenges
+
+
         'lists' => [
             'Entry clearance, Leave to Enter and Leave to Remain',
             'Applications under the Point-Based System',
@@ -143,5 +152,11 @@
     <x-main-pages.home.registeration-banners />
 
     <x-main-pages.home.top-companies />
+
+    {{-- <x-main-pages.home.pricing-section /> --}}
+
+    {{-- <x-main-pages.home.subscribe-section /> --}}
+
+
 
 </x-main-pages.layout>

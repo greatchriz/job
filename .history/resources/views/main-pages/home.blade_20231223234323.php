@@ -80,7 +80,7 @@
         $section = [
             'title' => 'Why choose the Immigration Advice Service team?',
             'texts' => [
-                'Navigating the complexities of UK immigration law and visa applications can be a confusing process without the right help. Whatever the nature of your case, Polticventures’ immigration lawyers are ready to take this stressful burden away from you and your family.',
+                'Navigating the complexities of UK immigration law and visa applications can be a confusing process without the right help. Whatever the nature of your case, IAS’ immigration lawyers are ready to take this stressful burden away from you and your family.',
             ],
         ];
     @endphp
@@ -92,7 +92,7 @@
     @php
 
         $section = [
-            'title' => 'Why hire one of Polticventures’ lawyers?',
+            'title' => 'Why hire one of IAS’ lawyers?',
             'texts' => [
                 'Our experienced nationwide immigration lawyers have an exemplary track record in Family and Partner Visa cases, as well as other point-based applications, such as Tier 1 and Skilled worker permits',
                 'Our bespoke services are available to those who plan to enter the UK, those who are already in the country and wish to extend their stay, and to asylum seekers and bail detainees.',
@@ -107,32 +107,6 @@
         :section="$section"
     />
 
-    @php
-
-    $section = [
-        'title' => 'How can Polticventure help me and my family?',
-        'texts' => [
-            'We have a nationwide network of immigration advice centres, and we provide efficient and excellent support to all our clients across Britain. We employ some of the best immigration specialists and caseworkers in the UK, and our staff are OISC-trained and regulated.',
-            'As well as making private and corporate applications for clients, we conduct publicly funded work for asylum-seekers, domestic-abuse survivors and victims of trafficking. IAS has a Legal Aid Agency Specialist Quality Mark (SQM).',
-        ],
-        'listHeader' => 'We offer professional assistance for several immigration processes, such as:',
-
-        'lists' => [
-            'Entry clearance, Leave to Enter and Leave to Remain',
-            'Applications under the Point-Based System',
-            'Marriage and Family Visas',
-            'Permanent residency and British citizenship applications',
-            'Work permits and employment Immigration services',
-            'Deportation appeals, bail and detention matters',
-            'Refugee and humanitarian protection enquiries',
-            'Appeals and judicial review challenges',
-        ]
-    ];
-@endphp
-
-<x-main-pages.home.no-image-content
-    :section="$section"
-/>
 
 
     <x-main-pages.home.work-section />
@@ -143,5 +117,11 @@
     <x-main-pages.home.registeration-banners />
 
     <x-main-pages.home.top-companies />
+
+    {{-- <x-main-pages.home.pricing-section /> --}}
+
+    {{-- <x-main-pages.home.subscribe-section /> --}}
+
+
 
 </x-main-pages.layout>

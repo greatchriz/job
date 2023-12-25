@@ -107,32 +107,6 @@
         :section="$section"
     />
 
-    @php
-
-    $section = [
-        'title' => 'How can Polticventure help me and my family?',
-        'texts' => [
-            'We have a nationwide network of immigration advice centres, and we provide efficient and excellent support to all our clients across Britain. We employ some of the best immigration specialists and caseworkers in the UK, and our staff are OISC-trained and regulated.',
-            'As well as making private and corporate applications for clients, we conduct publicly funded work for asylum-seekers, domestic-abuse survivors and victims of trafficking. IAS has a Legal Aid Agency Specialist Quality Mark (SQM).',
-        ],
-        'listHeader' => 'We offer professional assistance for several immigration processes, such as:',
-
-        'lists' => [
-            'Entry clearance, Leave to Enter and Leave to Remain',
-            'Applications under the Point-Based System',
-            'Marriage and Family Visas',
-            'Permanent residency and British citizenship applications',
-            'Work permits and employment Immigration services',
-            'Deportation appeals, bail and detention matters',
-            'Refugee and humanitarian protection enquiries',
-            'Appeals and judicial review challenges',
-        ]
-    ];
-@endphp
-
-<x-main-pages.home.no-image-content
-    :section="$section"
-/>
 
 
     <x-main-pages.home.work-section />
@@ -143,5 +117,11 @@
     <x-main-pages.home.registeration-banners />
 
     <x-main-pages.home.top-companies />
+
+    {{-- <x-main-pages.home.pricing-section /> --}}
+
+    {{-- <x-main-pages.home.subscribe-section /> --}}
+
+
 
 </x-main-pages.layout>
