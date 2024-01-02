@@ -7,16 +7,21 @@
             <div class="inner-box">
               <span class="icon"><img src="images/icons/placeholder.svg" alt=""></span>
               <h4>Address</h4>
-
-              <p>2001,Strawinskylaan Amsterdam,<br> North Holland, Netherlands.              </p>
+              <p>329 Queensberry Street, North<br> Melbourne VIC 3051, Australia.</p>
             </div>
           </div>
-
+          <div class="contact-block col-lg-4 col-md-6 col-sm-12">
+            <div class="inner-box">
+              <span class="icon"><img src="images/icons/smartphone.svg" alt=""></span>
+              <h4>Call Us</h4>
+              <p><a href="#" class="phone">123 456 7890</a></p>
+            </div>
+          </div>
           <div class="contact-block col-lg-4 col-md-6 col-sm-12">
             <div class="inner-box">
               <span class="icon"><img src="images/icons/letter.svg" alt=""></span>
               <h4>Email</h4>
-              <p><a href="#">contact@polticventure.co</a></p>
+              <p><a href="#">contact.london@example.com</a></p>
             </div>
           </div>
         </div>
