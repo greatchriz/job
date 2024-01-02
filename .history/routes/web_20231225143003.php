@@ -15,6 +15,14 @@ use Illuminate\Support\Str;
 |
 */
 
+// Home
+// About Us
+// Services
+// Terms & Conditions
+// Privacy Policy
+// Blog
+// Contact Us
+//
 
 Route::get('/', [\App\Http\Controllers\MainPageController::class, 'home'])->name('home');
 

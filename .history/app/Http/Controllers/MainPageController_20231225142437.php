@@ -76,7 +76,7 @@ class MainPageController extends Controller
     }
 
     //work-visa
-    public function workVisa()
+    public function visa()
     {
         return view('main-pages.work-visa');
     }

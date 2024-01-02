@@ -45,44 +45,11 @@
                         href="{{ route('job-listing') }}"
                         title="Jobs"
                     />
-                    {{-- @php
+                    @php
                         $megaMenus = [
-
                             [
-                                'title' => 'Skilled Worker Work Visa',
-                                'links' => [
-                                    ['title' => 'Work Visa', 'href' => route('work-visa')],
-                                    ['title' => 'Work Visa', 'href' => route('work-visa')],
-                                    ['title' => 'Work Visa', 'href' => route('work-visa')],
-                                ]
-                    ],
 
-                    [
-                                'links' => [
-                                    ['title' => 'Work Visa', 'href' => route('work-visa')],
-                                    ['title' => 'Work Visa', 'href' => route('work-visa')],
-                                    ['title' => 'Work Visa', 'href' => route('work-visa')],
-                                ]
-                    ],
-
-                    [
-                                'title' => 'Skilled Worker Work Visa',
-                                'links' => [
-                                    ['title' => 'Work Visa', 'href' => route('work-visa')],
-                                    ['title' => 'Work Visa', 'href' => route('work-visa')],
-                                    ['title' => 'Work Visa', 'href' => route('work-visa')],
-                                ]
-                    ],
-
-                    [
-                                'links' => [
-                                    ['title' => 'Work Visa', 'href' => route('work-visa')],
-                                    ['title' => 'Work Visa', 'href' => route('work-visa')],
-                                    ['title' => 'Work Visa', 'href' => route('work-visa')],
-                                ]
-                    ],
-
-
+                            ]
                         ];
                     @endphp
 
@@ -91,7 +58,7 @@
                         :current="request()->routeIs('work-visa')"
                         navTitle="Work Visa"
                         :megaMenus="$megaMenus"
-                    /> --}}
+                    />
 
 
                     <x-main-pages.nav-link

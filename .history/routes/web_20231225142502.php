@@ -15,6 +15,14 @@ use Illuminate\Support\Str;
 |
 */
 
+// Home
+// About Us
+// Services
+// Terms & Conditions
+// Privacy Policy
+// Blog
+// Contact Us
+//
 
 Route::get('/', [\App\Http\Controllers\MainPageController::class, 'home'])->name('home');
 
@@ -36,7 +44,7 @@ Route::get('/job-listing', [\App\Http\Controllers\MainPageController::class, 'jo
 Route::get('/jobs-details', [\App\Http\Controllers\MainPageController::class, 'jobsDetails'])->name('jobs-details');
 
 //work-visa
-Route::get('/work-visa', [\App\Http\Controllers\MainPageController::class, 'workVisa'])->name('work-visa');
+Route::get('/visa', [\App\Http\Controllers\MainPageController::class, 'visa'])->name('visa');
 
 Route::middleware([
     'auth:sanctum',

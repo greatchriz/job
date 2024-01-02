@@ -45,7 +45,7 @@
                         href="{{ route('job-listing') }}"
                         title="Jobs"
                     />
-                    {{-- @php
+                    @php
                         $megaMenus = [
 
                             [
@@ -91,7 +91,7 @@
                         :current="request()->routeIs('work-visa')"
                         navTitle="Work Visa"
                         :megaMenus="$megaMenus"
-                    /> --}}
+                    />
 
 
                     <x-main-pages.nav-link
