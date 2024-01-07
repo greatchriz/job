@@ -149,16 +149,16 @@ class JobSeeder extends Seeder
         $xpath = new DOMXPath($dom);
 
         // Query the DOMDocument to get all div elements with the class "section-jobs-item"
-        $divs = $xpath->query('//li[contains(@class, "ember-view   jobs-search-results__list-item occludable-update p0 relative scaffold-layout__list-item")]');
+        $divs = $xpath->query('//li[contains(@class, "scaffold-layout__list-item")]');
 
         // Initialize an array to store the job data
-        $amsterdamJobs = [];
+        $jobs = [];
 
         // Loop through each div element and extract the job data
         foreach ($divs as $div) {
             // Extract the job data from the div element
 
-            $logo = $xpath->evaluate('string(.//div[@class="ivm-view-attr__img-wrapper display-flex"]/img/@src)', $div);
+            $logo = $xpath->evaluate('string(.//div[@class="company-logo-oo"]/img/@src)', $div);
             if (!$logo) {
                 $logo = "https://www.jobsinnetwork.com/images/default.png";
             }
@@ -166,7 +166,7 @@ class JobSeeder extends Seeder
             // Example code to extract the job title
             // i want to clear all whitespaces
 
-            $title = $xpath->evaluate('string(.//a[@class="disabled ember-view job-card-container__link job-card-list__title"])', $div);
+            $title = $xpath->evaluate('string(.//a[@class="job-title-oo"])', $div);
 
             // Example code to extract the job description
             // $description = $xpath->evaluate('string(.//p)', $div);
@@ -174,8 +174,8 @@ class JobSeeder extends Seeder
 
             $description = $xpath->evaluate('string(.//p[@class="card-job-body-description"])', $div);
 
-            $companyName = $xpath->evaluate('string(.//span[@class="job-card-container__primary-description"])', $div);
-            $jobLocation = $xpath->evaluate('string(.//li[@class="job-card-container__metadata-item"])', $div);
+            $companyName = $xpath->evaluate('string(.//span[@class="company-name-oo"])', $div);
+            $jobLocation = $xpath->evaluate('string(.//li[@class="job-location-oo"])', $div);
 
 
             $startDate = Carbon::create(2023, 12, 7);
@@ -200,7 +200,7 @@ class JobSeeder extends Seeder
             $salary = "$fromSalaryFormatted - $toSalaryFormatted";
 
             // get location where name is Greece
-            $location = Location::where('name', 'Amsterdam')->first();
+            $location = Location::where('name', 'Rhodes')->first();
 
             // Create an array to store the job data
             $jobData = [
@@ -219,10 +219,10 @@ class JobSeeder extends Seeder
             ];
 
             // Add the job data to the array
-            $amsterdamJobs[] = $jobData;
+            $jobs[] = $jobData;
         }
 
         // Return the array of job data
-        return $amsterdamJobs;
+        return $jobs;
     }
 }
