@@ -42,12 +42,6 @@ class DatabaseSeeder extends Seeder
 
         // $this->call(CompanySeeder::class);
 
-        // call the CountrySeeder
-        $this->call(CountrySeeder::class);
-
-        // call the LocationSeeder
-        $this->call(LocationSeeder::class);
-
         $this->call(JobSeeder::class);
 
         // create 20 companies with company factory
@@ -76,7 +70,8 @@ class DatabaseSeeder extends Seeder
         // call the FormInputSeeder
         $this->call(FormInputSeeder::class);
 
-
+        // call the CountrySeeder
+        $this->call(CountrySeeder::class);
 
     }
 }

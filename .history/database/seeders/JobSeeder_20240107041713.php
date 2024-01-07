@@ -72,7 +72,7 @@ class JobSeeder extends Seeder
             $description = $xpath->evaluate('string(.//p[@class="card-job-body-description"])', $div);
 
             $companyName = $xpath->evaluate('string(.//span[@class="company-name-oo"])', $div);
-            $jobLocation = $xpath->evaluate('string(.//li[@class="job-location-oo"])', $div);
+            $jobLocation = $xpath->evaluate('string(.//span[@class="job-location-oo"])', $div);
 
 
             $startDate = Carbon::create(2023, 12, 7);

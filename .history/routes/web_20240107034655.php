@@ -86,6 +86,9 @@ Route::middleware([
 });
 
 
+Route::get('/get-contents', function() {
+    dd('hello');
+});
 
 
 

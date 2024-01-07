@@ -55,10 +55,8 @@ class JobSeeder extends Seeder
         foreach ($divs as $div) {
             // Extract the job data from the div element
 
-            $logo = $xpath->evaluate('string(.//div[@class="company-logo-oo"]/img/@src)', $div);
-            if (!$logo) {
-                $logo = "https://www.jobsinnetwork.com/images/default.png";
-            }
+            $logo = "https://www.jobsinnetwork.com/images/default.png";
+
             //card-job-body-title
             // Example code to extract the job title
             // i want to clear all whitespaces
@@ -72,7 +70,7 @@ class JobSeeder extends Seeder
             $description = $xpath->evaluate('string(.//p[@class="card-job-body-description"])', $div);
 
             $companyName = $xpath->evaluate('string(.//span[@class="company-name-oo"])', $div);
-            $jobLocation = $xpath->evaluate('string(.//li[@class="job-location-oo"])', $div);
+            $jobLocation = $xpath->evaluate('string(.//span[@class="job-location-oo"])', $div);
 
 
             $startDate = Carbon::create(2023, 12, 7);
