@@ -89,18 +89,23 @@
                             <a href="{{ route('register') }}" class="theme-btn btn-style-one">Register</a>
 
                         @endauth
-                        <span>
-                            <span class="contact-info">
+                            <span>
+                                <span class="contact-info">
 
-                                <span class="address">2001,Strawinskylaan Amsterdam, <br>North Holland, Netherlands.
+                                    <span class="address">329 Queensberry Street, North Melbourne VIC <br>3051,
+                                        Australia.</span>
+                                    <a
+                                        href="mailto:support@polticventure.co"
+                                        class="email"
+                                    >support@polticventure.co</a>
                                 </span>
-                                <a
-                                    href="mailto:support@polticventure.co"
-                                    class="email"
-                                >support@polticventure.co</a>
+                                <span class="social-links">
+                                    <a href="#"><span class="fab fa-facebook-f"></span></a>
+                                    <a href="#"><span class="fab fa-twitter"></span></a>
+                                    <a href="#"><span class="fab fa-instagram"></span></a>
+                                    <a href="#"><span class="fab fa-linkedin-in"></span></a>
+                                </span>
                             </span>
-
-                          </span>
                         </li>
                     </ul>
                 </nav>

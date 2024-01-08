@@ -30,7 +30,6 @@ class JobSeeder extends Seeder
         $jobs = $this->extractJobData($html);
         $amsterdamJobs = $this->getAmsterdamJobs($classes);
         $montrealJobs = $this->getMontrealJobs($classes);
-        $utretchJobs = $this->getUtretchJobs($classes);
 
         foreach ($jobs as $job) {
 
@@ -43,11 +42,6 @@ class JobSeeder extends Seeder
         }
 
         foreach ($montrealJobs as $job) {
-
-            Job::create($job);
-        }
-
-        foreach ($utretchJobs as $job) {
 
             Job::create($job);
         }
@@ -166,7 +160,7 @@ class JobSeeder extends Seeder
         $amsterdamJobs = [];
 
         foreach ($jobElements as $jobElement) {
-            $logo = $xpath->evaluate('string(.//div[@class="ivm-view-attr__img-wrapper display-flex"]/img/@src)', $jobElement);
+            $logo = $xpath->evaluate('string(.//div[@class="$jobLogoClass"]/img/@src)', $jobElement);
             $logo = $logo ?: "https://www.jobsinnetwork.com/images/default.png";
 
             $title = $xpath->evaluate('string(.//a[@class="disabled ember-view job-card-container__link job-card-list__title"])', $jobElement);
@@ -236,7 +230,7 @@ class JobSeeder extends Seeder
         // Loop through each job element and extract the job data
         foreach ($jobElements as $jobElement) {
             // Extract the job data from the job element
-            $logo = $xpath->evaluate('string(.//div[@class="ivm-view-attr__img-wrapper display-flex"]/img/@src)', $jobElement);
+            $logo = $xpath->evaluate('string(.//div[@class="$jobLogoClass"]/img/@src)', $jobElement);
             $logo = $logo ?: "https://www.jobsinnetwork.com/images/default.png";
 
             $title = $xpath->evaluate('string(.//a[@class="disabled ember-view job-card-container__link job-card-list__title"])', $jobElement);
@@ -277,81 +271,4 @@ class JobSeeder extends Seeder
 
         return $montrealJobs;
     }
-
-    //Utretch
-    //public/jobs/utretch.html
-
-    public function getUtretchJobs($jobClasses)
-    {
-
-        // Load the HTML content into the DOMDocument
-        $html = file_get_contents(public_path('jobs/utretch.html'));
-        $dom = new DOMDocument();
-        libxml_use_internal_errors(true);
-        $dom->loadHTML($html);
-        libxml_use_internal_errors(false);
-
-        // Create an XPath object to query the DOMDocument
-        // Create an XPath object to query the DOMDocument
-        $xpath = new DOMXPath($dom);
-
-        // Retrieve the class names for the job card and job logo
-        $jobCardClass = $jobClasses['job'];
-        $jobLogoClass = $jobClasses['logo'];
-        $jobTitleClass = $jobClasses['title'];
-        $jobCompanyClass = $jobClasses['company'];
-        $jobLocationClass = $jobClasses['location'];
-
-        // Query the DOMDocument to get all li elements with the specified job card class
-        $jobElements = $xpath->query("//li[contains(@class, '$jobCardClass')]");
-
-        // Initialize an array to store the job data
-        $utretchJobs = [];
-
-        // Loop through each job element and extract the job data
-        foreach ($jobElements as $jobElement) {
-            // Extract the job data from the job element
-            $logo = $xpath->evaluate('string(.//div[@class="ivm-view-attr__img-wrapper display-flex"]/img/@src)', $jobElement);
-            $logo = $logo ?: "https://www.jobsinnetwork.com/images/default.png";
-
-            $title = $xpath->evaluate('string(.//a[@class="disabled ember-view job-card-container__link job-card-list__title"])', $jobElement);
-            $description = $xpath->evaluate('string(.//p[@class="card-job-body-description"])', $jobElement);
-            $companyName = $xpath->evaluate('string(.//span[@class="job-card-container__primary-description"])', $jobElement);
-            $jobLocation = $xpath->evaluate('string(.//li[@class="job-card-container__metadata-item"])', $jobElement);
-
-            // Perform additional data processing and formatting
-            $startDate = Carbon::create(2023, 12, 7);
-            $endDate = Carbon::create(now());
-            $deadlineStartDate = Carbon::create(2023, 12, 18);
-            $deadlineEndDate = Carbon::create(2024, 3, 21);
-            $fromSalaryRange = rand(5000, 40000);
-            $fromSalaryRange = ceil($fromSalaryRange / 5000) * 5000;
-            $fromSalaryRange = $fromSalaryRange < 25000 ? 25000 : $fromSalaryRange;
-            $toSalaryRange = rand($fromSalaryRange + 5000, 100000);
-            $toSalaryRange = floor($toSalaryRange / 5000) * 5000;
-            $fromSalaryFormatted = number_format($fromSalaryRange / 1000, 0) . 'k';
-            $toSalaryFormatted = number_format($toSalaryRange / 1000, 0) . 'k';
-            $salary = "$fromSalaryFormatted - $toSalaryFormatted";
-            $location = Location::where('name', 'Utrecht')->first();
-
-            $jobData = [
-                'location_id' => $location->id,
-                'companyLogo' => $logo,
-                'title' => $title,
-                'description' => $description,
-                'companyName' => $companyName,
-                'jobLocation' => $jobLocation,
-                'deadline' => $deadlineStartDate->copy()->addDays(rand(0, $deadlineEndDate->diffInDays($deadlineStartDate))),
-                'postedDate' => $startDate->copy()->addDays(rand(0, $endDate->diffInDays($startDate))),
-                'salary' => $salary,
-            ];
-
-            // Add the job data to the Montreal jobs array
-            $utretchJobs[] = $jobData;
-        }
-
-        return $utretchJobs;
-
-    }
-
 }

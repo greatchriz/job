@@ -332,7 +332,7 @@ class JobSeeder extends Seeder
             $fromSalaryFormatted = number_format($fromSalaryRange / 1000, 0) . 'k';
             $toSalaryFormatted = number_format($toSalaryRange / 1000, 0) . 'k';
             $salary = "$fromSalaryFormatted - $toSalaryFormatted";
-            $location = Location::where('name', 'Utrecht')->first();
+            $location = Location::where('name', 'Utretch')->first();
 
             $jobData = [
                 'location_id' => $location->id,
