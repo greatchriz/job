@@ -8,7 +8,7 @@
                         class="title-box wow fadeInUp"
                         data-wow-delay="300ms"
                     >
-                        <h3>Polticventure: Your Gateway to a New Life!</h3>
+                        <h3>Helpnow: Your Gateway to a New Life!</h3>
                         <div class="text">Find Jobs, Employment & Career Opportunities</div>
                     </div>
 

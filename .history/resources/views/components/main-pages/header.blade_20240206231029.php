@@ -7,13 +7,14 @@
             <!--Nav Outer -->
             <div class="nav-outer">
                 <div class="logo-box">
-                    <div class="logo"><a href="/"><img
-                                src="/assets/images/header1-logo.svg"
-                                height="90px"
-                                width="180px"
-                                alt=""
-                                title=""
-                            ></a></div>
+                    <div class="logo"><a href="/">
+                        <img
+                                                src="/assets/images/default.svg"
+                                                width="180px"
+                                                height="90px"
+                                                alt=""
+                                            >
+                        </a></div>
                 </div>
 
                 <nav class="nav main-menu">
@@ -89,23 +90,18 @@
                             <a href="{{ route('register') }}" class="theme-btn btn-style-one">Register</a>
 
                         @endauth
-                            <span>
-                                <span class="contact-info">
+                        <span>
+                            <span class="contact-info">
 
-                                    <span class="address">329 Queensberry Street, North Melbourne VIC <br>3051,
-                                        Australia.</span>
-                                    <a
-                                        href="mailto:support@help-now.net"
-                                        class="email"
-                                    >support@help-now.net</a>
+                                <span class="address">2001,Strawinskylaan Amsterdam, <br>North Holland, Netherlands.
                                 </span>
-                                <span class="social-links">
-                                    <a href="#"><span class="fab fa-facebook-f"></span></a>
-                                    <a href="#"><span class="fab fa-twitter"></span></a>
-                                    <a href="#"><span class="fab fa-instagram"></span></a>
-                                    <a href="#"><span class="fab fa-linkedin-in"></span></a>
-                                </span>
+                                <a
+                                    href="mailto:support@help-now.net"
+                                    class="email"
+                                >support@help-now.net</a>
                             </span>
+
+                          </span>
                         </li>
                     </ul>
                 </nav>

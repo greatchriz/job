@@ -95,9 +95,9 @@
                                     <span class="address">2001,Strawinskylaan Amsterdam, <br>North Holland, Netherlands.
                                     </span>
                                     <a
-                                        href="mailto:support@polticventure.co"
+                                        href="mailto:support@help-now.net"
                                         class="email"
-                                    >support@polticventure.co</a>
+                                    >support@help-now.net</a>
                                 </span>
                                 <span class="social-links">
                                     <a href="#"><span class="fab fa-facebook-f"></span></a>
