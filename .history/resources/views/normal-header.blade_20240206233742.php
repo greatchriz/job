@@ -7,12 +7,11 @@
             <div class="nav-outer">
                 <div class="logo-box">
                     <div class="logo"><a href="/"><img
-                                src="/assets/images/header1-logo.svg"
-                                height="90px"
-                                width="180px"
-                                alt=""
-                                title=""
-                            ></a></div>
+                        src="/assets/images/default-monochrome.svg"
+                        width="180px"
+                        height="90px"
+                        alt=""
+                    ></a></div>
                 </div>
 
 
@@ -41,10 +40,66 @@
                     />
 
                     <x-main-pages.nav-link
+                        :current="request()->routeIs('job-listing')"
+                        href="{{ route('job-listing') }}"
+                        title="Jobs"
+                    />
+                    {{-- @php
+                        $megaMenus = [
+
+                            [
+                                'title' => 'Skilled Worker Work Visa',
+                                'links' => [
+                                    ['title' => 'Work Visa', 'href' => route('work-visa')],
+                                    ['title' => 'Work Visa', 'href' => route('work-visa')],
+                                    ['title' => 'Work Visa', 'href' => route('work-visa')],
+                                ]
+                    ],
+
+                    [
+                                'links' => [
+                                    ['title' => 'Work Visa', 'href' => route('work-visa')],
+                                    ['title' => 'Work Visa', 'href' => route('work-visa')],
+                                    ['title' => 'Work Visa', 'href' => route('work-visa')],
+                                ]
+                    ],
+
+                    [
+                                'title' => 'Skilled Worker Work Visa',
+                                'links' => [
+                                    ['title' => 'Work Visa', 'href' => route('work-visa')],
+                                    ['title' => 'Work Visa', 'href' => route('work-visa')],
+                                    ['title' => 'Work Visa', 'href' => route('work-visa')],
+                                ]
+                    ],
+
+                    [
+                                'links' => [
+                                    ['title' => 'Work Visa', 'href' => route('work-visa')],
+                                    ['title' => 'Work Visa', 'href' => route('work-visa')],
+                                    ['title' => 'Work Visa', 'href' => route('work-visa')],
+                                ]
+                    ],
+
+
+                        ];
+                    @endphp
+
+                    <x-main-pages.mega-menu-nav
+                        class="dropdown has-mega-menu" id="has-mega-menu"
+                        :current="request()->routeIs('work-visa')"
+                        navTitle="Work Visa"
+                        :megaMenus="$megaMenus"
+                    /> --}}
+
+
+                    <x-main-pages.nav-link
                         :current="request()->routeIs('services')"
                         href="{{ route('services') }}"
                         title="Services"
                     />
+
+
 
                     <x-main-pages.nav-link
                         :current="request()->routeIs('terms')"
@@ -52,29 +107,41 @@
                         title="Terms & Conditions"
                     />
 
-                    <x-main-pages.nav-link
+                    {{-- <x-main-pages.nav-link
                         :current="request()->routeIs('privacy-policy')"
                         href="{{ route('privacy-policy') }}"
                         title="Privacy Policy"
-                    />
+                    /> --}}
 
-                    <x-main-pages.nav-link
+                    {{-- <x-main-pages.nav-link
                         :current="request()->routeIs('blog')"
                         href="{{ route('blog') }}"
                         title="Blog"
-                    />
+                    /> --}}
 
-                    <x-main-pages.nav-link
+
+
+                    {{-- <x-main-pages.nav-link
                         :current="request()->routeIs('contact-us')"
                         href="{{ route('contact-us') }}"
                         title="Contact Us"
-                    />
+                    /> --}}
+
+
                     <!-- Only for Mobile View -->
                     <li class="mm-add-listing">
-                        <a
-                            href="add-listing.html"
-                            class="theme-btn btn-style-one"
-                        >Job Post</a>
+                        @auth
+                        @if(auth()->user()->hasRole('admin'))
+                            <a href="{{ route('admin.dashboard') }}" class="theme-btn btn-style-one">Admin Dashboard</a>
+                        @else
+                            <a href="{{ route('dashboard') }}" class="theme-btn btn-style-one">Dashboard</a>
+                        @endif
+                        @else
+                            <a href="{{ route('login') }}" class="theme-btn btn-style-one" style="margin-bottom: 10px">Login</a>
+
+                            <a href="{{ route('register') }}" class="theme-btn btn-style-one">Register</a>
+
+                        @endauth
                         <span>
                             <span class="contact-info">
                                 <span class="phone-num"><span>Call us</span><a href="tel:1234567890">123 456
@@ -102,14 +169,22 @@
             <div class="outer-box">
                 <!-- Login/Register -->
                 <div class="btn-box">
-                    <a
-                        href="login-popup.html"
-                        class="theme-btn btn-style-three call-modal"
-                    >Login / Register</a>
-                    <a
-                        href="#"
-                        class="theme-btn btn-style-one"
-                    ><span class="btn-title">Job Post</span></a>
+                    @auth
+                        <a
+                            href="/dashboard"
+                            class="theme-btn btn-style-one"
+                        ><span class="btn-title">Dashboard</span></a>
+                    @else
+                        <a
+                            href="/login"
+                            class="theme-btn btn-style-three"
+                        >Login</a>
+                        <a
+                            href="/register"
+                            class="theme-btn btn-style-one"
+                        ><span class="btn-title">Register</span></a>
+                    @endauth
+
                 </div>
             </div>
         </div>
@@ -118,12 +193,11 @@
     <!-- Mobile Header -->
     <div class="mobile-header">
         <div class="logo"><a href="/"><img
-                    src="assets/images/header1-logo.svg"
-                    height="90px"
-                    width="180px"
-                    alt=""
-                    title=""
-                ></a></div>
+            src="/assets/images/default-monochrome.svg"
+            width="180px"
+            height="90px"
+            alt=""
+        ></a></div>
 
         <!--Nav Box-->
         <div class="nav-outer clearfix">

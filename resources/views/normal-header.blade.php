@@ -7,12 +7,11 @@
             <div class="nav-outer">
                 <div class="logo-box">
                     <div class="logo"><a href="/"><img
-                                src="/assets/images/header1-logo.svg"
-                                height="90px"
-                                width="180px"
-                                alt=""
-                                title=""
-                            ></a></div>
+                        src="/assets/images/default-monochrome.svg"
+                        width="180px"
+                        height="90px"
+                        alt=""
+                    ></a></div>
                 </div>
 
 
@@ -194,12 +193,11 @@
     <!-- Mobile Header -->
     <div class="mobile-header">
         <div class="logo"><a href="/"><img
-                    src="assets/images/header1-logo.svg"
-                    height="90px"
-                    width="180px"
-                    alt=""
-                    title=""
-                ></a></div>
+            src="/assets/images/default-monochrome.svg"
+            width="180px"
+            height="90px"
+            alt=""
+        ></a></div>
 
         <!--Nav Box-->
         <div class="nav-outer clearfix">
