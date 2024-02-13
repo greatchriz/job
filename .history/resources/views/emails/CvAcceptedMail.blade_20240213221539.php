@@ -120,8 +120,10 @@
                                 <tr>
                                     <td
                                         style="padding:48px 0 30px 0; text-align: center; font-size: 14px; color: #4C83EE;">
-                                        <img src="https://share1.cloudhq-mkt3.net/53a11390b5fd67.png" width="180" height="50">
-
+                                        <img
+                                            src="https://mailsend-email-assets.mailtrap.io/kv9j2zx8sjo3yra3uabwjealuv0n.png"
+                                            width="100px"
+                                            height="100px"
                                             </td
                                         >
                                 </tr>
