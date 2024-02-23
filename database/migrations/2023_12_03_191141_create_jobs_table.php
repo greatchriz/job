@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('companyLogo')->nullable();
             $table->string('companyName')->nullable();
             $table->string('jobLocation')->nullable();
-            $table->string('title')->nullable();
+            $table->text('title')->nullable();
             $table->text('description')->nullable();
             $table->text('responsibilities')->nullable();
             $table->text('requirements')->nullable();

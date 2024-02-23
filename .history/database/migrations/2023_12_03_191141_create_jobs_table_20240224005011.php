@@ -13,15 +13,16 @@ return new class extends Migration
     {
         Schema::create('jobs', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('location_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
             // $table->foreignId('company_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
             //'companyName' => $companyName,
             // 'jobLocation' => $jobLocation,
             // 'jobDate' => $jobDate,
 
+            $table->string('companyLogo')->nullable();
             $table->string('companyName')->nullable();
             $table->string('jobLocation')->nullable();
-            $table->date('jobDate')->nullable();
-            $table->string('title')->nullable();
+            $table->text('title')->nullable();
             $table->text('description')->nullable();
             $table->text('responsibilities')->nullable();
             $table->text('requirements')->nullable();
@@ -29,7 +30,9 @@ return new class extends Migration
             $table->text('duties')->nullable();
             $table->text('benefits')->nullable();
             $table->string('salary')->nullable();
-            $table->string('deadline')->nullable();
+            $table->date('deadline')->nullable();
+            $table->date('postedDate')->nullable();
+
             $table->timestamps();
         });
     }
