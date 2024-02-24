@@ -75,6 +75,7 @@ class UserController extends Controller
     {
         $user = User::find(auth()->user()->id);
         $userFlights = $user->flights;
+        dd('User Flights');
         return view('user.user-flights', ['userFlights' => $userFlights]);
     }
 
