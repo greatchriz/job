@@ -23,8 +23,7 @@
 
             <li>
                 <span>Last Deposit</span>
-                {{-- using conditional: if user has no transaction where transaction->type is deposit, show you have no deposit else show last deposit date--}}
-                <strong>{{ $user->transactions->where('type', 'deposit')->first()? $user->transactions->where('type', 'deposit')->first()->created_at : 'You have no deposit' }}</strong>
+                <strong>24/02/2024</strong>
             </li>
 
         </ul>
@@ -98,16 +97,8 @@
 
         <!--Order Box-->
         <div class="order-box">
-            <h3 style="border-bottom: 2px solid #1f1d1d; padding-bottom: 5px; font-weight: bold">Deposit Details</h3>
+            <h3 style="border-bottom: 2px solid #1f1d1d; padding-bottom: 5px;">Deposit Details</h3>
             <br>
-            {{-- if user has no transaction then display no transaction else show table--}}
-
-            @if (count($user->transactions) == 0)
-                <p>No Transactions</p>
-            @else
-
-            @foreach ($user->transactions as $item)
-
             <table>
                 <thead>
                     <tr>
@@ -142,10 +133,6 @@
             </table>
 
             <div style="border-bottom: 2px solid #1f1d1d; padding-bottom: 5px;"></div>
-            @endforeach
-
-            @endif
-
         </div>
         <!--End Order Box-->
     </div>

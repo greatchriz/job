@@ -99,11 +99,5 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany(Flight::class);
     }
 
-    //transactions
-    public function transactions()
-    {
-        return $this->hasMany(Transaction::class);
-    }
-
 
 }

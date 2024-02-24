@@ -98,16 +98,8 @@
 
         <!--Order Box-->
         <div class="order-box">
-            <h3 style="border-bottom: 2px solid #1f1d1d; padding-bottom: 5px; font-weight: bold">Deposit Details</h3>
+            <h3 style="border-bottom: 2px solid #1f1d1d; padding-bottom: 5px;">Deposit Details</h3>
             <br>
-            {{-- if user has no transaction then display no transaction else show table--}}
-
-            @if (count($user->transactions) == 0)
-                <p>No Transactions</p>
-            @else
-
-            @foreach ($user->transactions as $item)
-
             <table>
                 <thead>
                     <tr>
@@ -142,10 +134,6 @@
             </table>
 
             <div style="border-bottom: 2px solid #1f1d1d; padding-bottom: 5px;"></div>
-            @endforeach
-
-            @endif
-
         </div>
         <!--End Order Box-->
     </div>

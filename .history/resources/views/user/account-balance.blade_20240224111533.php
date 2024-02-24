@@ -98,7 +98,7 @@
 
         <!--Order Box-->
         <div class="order-box">
-            <h3 style="border-bottom: 2px solid #1f1d1d; padding-bottom: 5px; font-weight: bold">Deposit Details</h3>
+            <h3 style="border-bottom: 2px solid #1f1d1d; padding-bottom: 5px, font-weight: bold;">Deposit Details</h3>
             <br>
             {{-- if user has no transaction then display no transaction else show table--}}
 
