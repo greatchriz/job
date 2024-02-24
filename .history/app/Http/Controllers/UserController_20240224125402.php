@@ -88,8 +88,7 @@ class UserController extends Controller
     //deposit: user deposit form page
     public function deposit()
     {
-        $user = User::find(auth()->user()->id);
-        return view('user.deposit', ['user' => $user]);
+        return view('user.deposit');
     }
 
 }

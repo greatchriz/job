@@ -33,15 +33,12 @@
             <a href="{{ route('deposit') }}" class="theme-btn btn-style-four large">Make Deposit</a>
         </div>
 
-        <!--
         <div class="upper-box">
             <h4>Make Deposit</h4>
             <div class="text">Make deposit to the account to the Wallet addresses below and send screeenshot to <a href="mailto:support@help-now.net">support@help-now.net.</a>for confirmation Purposes</div>
         </div>
-        -->
 
         <!--Order Box-->
-        <!--
         <div class="order-box">
             <table>
                 <thead>
@@ -72,7 +69,6 @@
 
             </table>
         </div>
-    -->
         <!--End Order Box-->
 
         <!--Order Box-->
