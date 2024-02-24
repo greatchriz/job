@@ -106,42 +106,40 @@
 
         <!--Order Box-->
         <div class="order-box">
-            <h3 style="border-bottom: 2px solid #1f1d1d; padding-bottom: 5px;">Deposit Details</h3>
-            <br>
+            <h3>Order details</h3>
             <table>
                 <thead>
                     <tr>
-                        <th><strong>Transaction Id</strong></th>
-                        <th><strong>#DRTHF45SD</strong></th>
+                        <th><strong>Product</strong></th>
+                        <th><strong>Subtotal</strong></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="cart-item">
-                        <td class="product-name">Amount</td>
-                        <td class="product-total">$700.00</td>
+                        <td class="product-name">Hoodie x2</td>
+                        <td class="product-total">59.00</td>
                     </tr>
 
                     <tr class="cart-item">
-                        <td class="product-name">Currency</td>
-                        <th>
-                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="15%" height="15%" viewBox="0 0 339.43 295.27">
-                                <title>tether-usdt-logo</title>
-                                <path d="M62.15,1.45l-61.89,130a2.52,2.52,0,0,0,.54,2.94L167.95,294.56a2.55,2.55,0,0,0,3.53,0L338.63,134.4a2.52,2.52,0,0,0,.54-2.94l-61.89-130A2.5,2.5,0,0,0,275,0H64.45a2.5,2.5,0,0,0-2.3,1.45h0Z" style="fill:#50af95;fill-rule:evenodd" />
-                                <path d="M191.19,144.8v0c-1.2.09-7.4,0.46-21.23,0.46-11,0-18.81-.33-21.55-0.46v0c-42.51-1.87-74.24-9.27-74.24-18.13s31.73-16.25,74.24-18.15v28.91c2.78,0.2,10.74.67,21.74,0.67,13.2,0,19.81-.55,21-0.66v-28.9c42.42,1.89,74.08,9.29,74.08,18.13s-31.65,16.24-74.08,18.12h0Zm0-39.25V79.68h59.2V40.23H89.21V79.68H148.4v25.86c-48.11,2.21-84.29,11.74-84.29,23.16s36.18,20.94,84.29,23.16v82.9h42.78V151.83c48-2.21,84.12-11.73,84.12-23.14s-36.09-20.93-84.12-23.15h0Zm0,0h0Z" style="fill:#fff;fill-rule:evenodd" />
-                            </svg>
-
-                        </th>
-                    </tr>
-
-                    <tr class="cart-item">
-                        <td class="product-name">Wallet</td>
-                        <td class="product-total">TRCJRj9LnziCuMsvjy2CAm77y73UBM4Q16</td>
+                        <td class="product-name">Seo Books x 1</td>
+                        <td class="product-total">67.00</td>
                     </tr>
                 </tbody>
-
+                <tfoot>
+                    <tr class="cart-subtotal">
+                        <td>Subtotal</td>
+                        <td><span class="amount">$178.00</span></td>
+                    </tr>
+                    <tr class="cart-subtotal">
+                        <td>Shipping</td>
+                        <td><span class="amount">$178.00</span></td>
+                    </tr>
+                    <tr class="order-total">
+                        <td>Total</td>
+                        <td><span class="amount">$9,218.00</span></td>
+                    </tr>
+                </tfoot>
             </table>
-
-            <div style="border-bottom: 2px solid #1f1d1d; padding-bottom: 5px;"></div>
         </div>
         <!--End Order Box-->
     </div>

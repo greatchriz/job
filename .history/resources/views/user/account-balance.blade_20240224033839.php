@@ -106,13 +106,12 @@
 
         <!--Order Box-->
         <div class="order-box">
-            <h3 style="border-bottom: 2px solid #1f1d1d; padding-bottom: 5px;">Deposit Details</h3>
-            <br>
+            <h3>Deposit Details</h3>
             <table>
                 <thead>
                     <tr>
-                        <th><strong>Transaction Id</strong></th>
-                        <th><strong>#DRTHF45SD</strong></th>
+                        <th><strong>Product</strong></th>
+                        <th><strong>Subtotal</strong></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -140,8 +139,6 @@
                 </tbody>
 
             </table>
-
-            <div style="border-bottom: 2px solid #1f1d1d; padding-bottom: 5px;"></div>
         </div>
         <!--End Order Box-->
     </div>

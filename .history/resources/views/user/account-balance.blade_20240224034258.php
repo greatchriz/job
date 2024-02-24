@@ -140,8 +140,6 @@
                 </tbody>
 
             </table>
-
-            <div style="border-bottom: 2px solid #1f1d1d; padding-bottom: 5px;"></div>
         </div>
         <!--End Order Box-->
     </div>
