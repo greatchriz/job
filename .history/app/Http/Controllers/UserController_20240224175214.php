@@ -102,27 +102,21 @@ class UserController extends Controller
         ]);
 
         // number of transactions
-        $numberOfTransactions = Transaction::count() + 1;
+        $numberOfTransactions = Transaction::count();
 
-        $transactionID = 'QEDSDAS13KJ0' . $numberOfTransactions;
+        dd($numberOfTransactions);
+
+
+        $amountToDeposit = $validatedData['amount']; // Use the validated amount
 
         $user = User::find(auth()->user()->id);
 
-        $transaction = $user->transactions()->create([
-            'transaction_id' => $transactionID,
-            'amount' => $validatedData['amount'],
-            'crypto_account' => $validatedData['crypto_account'],
-            'type' => $request->type,
-        ]);
+        // Update user's account balance
+        $user->account_balance += $amountToDeposit;
+        $user->save();
 
         // Redirect to dashboard with success message
-        return redirect()->route('deposit.complete', $transaction)->with('status', 'Deposit successful.');
-    }
-
-    //depositComplete: display the page that shows the details of the crypto account he selected and how to complete the deposit
-    public function depositComplete(Transaction $transaction)
-    {
-        return view('user.deposit-complete', ['transaction' => $transaction]);
+        return redirect()->route('dashboard')->with('status', 'Deposit successful.');
     }
 
 }

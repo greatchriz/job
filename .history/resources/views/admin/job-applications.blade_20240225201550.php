@@ -29,9 +29,7 @@
                             <h3><a href="#">User Email:&nbsp; &nbsp; <b>{{ $job->user->email }}</b></a></h3>
                             <h3><a href="#">Date Applied:&nbsp; &nbsp; <b>{{ $job->created_at }}</b></a></h3>
                             {{-- jobapplication cv --}}
-                            <a href="{{ route('job-applications.view-cv', $job->id) }}" class="theme-btn btn-style-four">
-                                View CV</a>
-
+                            <h3><a href="{{ route('job-applications.view-cv', $job->id) }}">View CV</a></h3>
 
 
                         </div>

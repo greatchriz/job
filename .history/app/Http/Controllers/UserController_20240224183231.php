@@ -122,7 +122,7 @@ class UserController extends Controller
     //depositComplete: display the page that shows the details of the crypto account he selected and how to complete the deposit
     public function depositComplete(Transaction $transaction)
     {
-        return view('user.deposit-complete', ['transaction' => $transaction]);
+        return view('user.deposit-complete' ['transaction' => $transaction]);
     }
 
 }

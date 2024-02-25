@@ -19,6 +19,8 @@ return new class extends Migration
             $table->boolean('active')->default(false);
             // type of transaction which options are deposit, expenses, withdrawal
             $table->enum('type', ['deposit', 'expenses', 'withdrawal']);
+            //payment method
+            $table->string('payment_method');
             //user_id
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
 

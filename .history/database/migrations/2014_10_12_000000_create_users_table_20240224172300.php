@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             //account_balance generate a propermigration column
-            $table->float('account_balance', 10, 2)->default(0);
+            $table->float('account_balance', 2)->default(0);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

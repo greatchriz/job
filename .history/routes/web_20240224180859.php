@@ -59,7 +59,7 @@ Route::middleware([
     //deposit.store
     Route::post('/deposit/store', [\App\Http\Controllers\UserController::class, 'depositStore'])->name('deposit.store');
     // deposit.complete
-    Route::get('/deposit/complete/{transaction}', [\App\Http\Controllers\UserController::class, 'depositComplete'])->name('deposit.complete');
+    Route::get('/deposit/{transaction}/complete', [\App\Http\Controllers\UserController::class, 'depositComplete'])->name('deposit.complete');
     //withdraw
     Route::get('/withdraw', [\App\Http\Controllers\UserController::class, 'withdraw'])->name('withdraw');
 
@@ -80,9 +80,6 @@ Route::middleware([
     Route::get('/admin/form-inputs/{formInput}/edit', [\App\Http\Controllers\AdminController::class, 'formInputsEdit'])->name('admin.form-inputs.edit');
 
     Route::put('/admin/form-inputs/{formInput}/update', [\App\Http\Controllers\AdminController::class, 'formInputsUpdate'])->name('admin.form-inputs.update');
-
-    //view-cv
-    Route::get('/job-applications/{jobApplication}/view-cv', [\App\Http\Controllers\JobApplicationController::class, 'viewCv'])->name('job-applications.view-cv');
 
     Route::put('/job-applications/{jobApplication}/update', [\App\Http\Controllers\JobApplicationController::class, 'update'])->name('job-applications.update');
 

@@ -17,26 +17,21 @@
         <!-- Job Block -->
         @forelse ($jobApplications as $job)
 
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="news-block">
+                <div class="inner-box">
+
+                    <div class="lower-content">
+
+                        <h3><a href="blog-single.html">{{ $job->user->name }}</a></h3>
+                        <p class="text">A job ravenously while Far much that one rank beheld after outside....</p>
+
+                    </div>
+                </div>
+            </div>
 
             <!-- Job Block -->
             <div class="job-block" style="cursor: pointer">
-                <div class="news-block">
-                    <div class="inner-box">
-
-                        <div class="lower-content">
-
-                            <h3><a href="#">User Name:&nbsp; &nbsp; <b>{{ $job->user->name }}</b></a></h3>
-                            <h3><a href="#">User Email:&nbsp; &nbsp; <b>{{ $job->user->email }}</b></a></h3>
-                            <h3><a href="#">Date Applied:&nbsp; &nbsp; <b>{{ $job->created_at }}</b></a></h3>
-                            {{-- jobapplication cv --}}
-                            <a href="{{ route('job-applications.view-cv', $job->id) }}" class="theme-btn btn-style-four">
-                                View CV</a>
-
-
-
-                        </div>
-                    </div>
-                </div>
                 <div class="inner-box">
                     <div class="content">
                     <span class="company-logo"><img
@@ -132,6 +127,8 @@
                 </div>
 
             </div>
+        </div>
+
 
         @empty
             <div class="message-box error">

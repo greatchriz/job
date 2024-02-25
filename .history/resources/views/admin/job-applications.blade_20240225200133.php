@@ -25,14 +25,8 @@
 
                         <div class="lower-content">
 
-                            <h3><a href="#">User Name:&nbsp; &nbsp; <b>{{ $job->user->name }}</b></a></h3>
-                            <h3><a href="#">User Email:&nbsp; &nbsp; <b>{{ $job->user->email }}</b></a></h3>
-                            <h3><a href="#">Date Applied:&nbsp; &nbsp; <b>{{ $job->created_at }}</b></a></h3>
-                            {{-- jobapplication cv --}}
-                            <a href="{{ route('job-applications.view-cv', $job->id) }}" class="theme-btn btn-style-four">
-                                View CV</a>
-
-
+                            <h3><a href="#">User Name:&nbsp; &nbsp; {{ $job->user->name }}</a></h3>
+                            <p class="text">A job ravenously while Far much that one rank beheld after outside....</p>
 
                         </div>
                     </div>

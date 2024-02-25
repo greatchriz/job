@@ -6,7 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Spatie\Activitylog\Models\Activity;
 use App\Models\Job;
-use App\Models\Transaction;
+
 
 
 
@@ -93,36 +93,22 @@ class UserController extends Controller
     }
 
     //depositStore: process the deposit and update user's account balance
-    public function depositStore(Request $request)
-    {
+public function depositStore(Request $request)
+{
+    $validatedData = $request->validate([
+        'amount' => 'required|numeric|min:0.01', // Assuming the minimum deposit is $0.01
+    ]);
 
-        $validatedData = $request->validate([
-            'amount' => 'required|numeric|min:0.01', // Assuming the minimum deposit is $0.01
-            'crypto_account' => 'required',
-        ]);
+    $amountToDeposit = $validatedData['amount']; // Use the validated amount
 
-        // number of transactions
-        $numberOfTransactions = Transaction::count() + 1;
+    $user = User::find(auth()->user()->id);
 
-        $transactionID = 'QEDSDAS13KJ0' . $numberOfTransactions;
+    // Update user's account balance
+    $user->account_balance += $amountToDeposit;
+    $user->save();
 
-        $user = User::find(auth()->user()->id);
-
-        $transaction = $user->transactions()->create([
-            'transaction_id' => $transactionID,
-            'amount' => $validatedData['amount'],
-            'crypto_account' => $validatedData['crypto_account'],
-            'type' => $request->type,
-        ]);
-
-        // Redirect to dashboard with success message
-        return redirect()->route('deposit.complete', $transaction)->with('status', 'Deposit successful.');
-    }
-
-    //depositComplete: display the page that shows the details of the crypto account he selected and how to complete the deposit
-    public function depositComplete(Transaction $transaction)
-    {
-        return view('user.deposit-complete', ['transaction' => $transaction]);
-    }
+    // Redirect to dashboard with success message
+    return redirect()->route('dashboard')->with('status', 'Deposit successful.');
+}
 
 }

@@ -40,7 +40,7 @@
                                 <label>Crypto Account</label>
                                 <select class="chosen-select" name="crypto_account">
                                     <option value="bitcoin">Bitcoin </option>
-                                    <option value="usdt">USDT (TRC20)</option>
+                                    <option value="usdt">USDT TRC20</option>
 
                                 </select>
                             </div>

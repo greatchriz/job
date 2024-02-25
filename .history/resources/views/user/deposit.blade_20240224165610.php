@@ -19,7 +19,7 @@
         <div class="ls-widget">
             <div class="tabs-box">
                 <div class="widget-content" style="padding: 30px 30px 10px;">
-                    <form method="POST" action="{{ route('deposit.store') }}" class="default-form">
+                    <form method="POST" action="{{ route('user.deposit') }}" class="default-form">
                         @csrf
                         <div class="row">
 
@@ -30,17 +30,14 @@
                             <!-- Input -->
                             <div class="form-group col-lg-6 col-md-12">
                                 <label>Amount</label>
-                                <input type="number" name="amount" placeholder="">
+                                <input type="text" name="amount" placeholder="">
                             </div>
-                            @error('amount')
-                                <p style="background-color: rgb(183, 89, 89); color: white; padding: 5px; border-radius: 5px;">{{ $message }}</p>
-                            @enderror
 
                             <div class="form-group col-lg-6 col-md-12">
                                 <label>Crypto Account</label>
                                 <select class="chosen-select" name="crypto_account">
                                     <option value="bitcoin">Bitcoin </option>
-                                    <option value="usdt">USDT (TRC20)</option>
+                                    <option value="usdt">USDT TRC20</option>
 
                                 </select>
                             </div>

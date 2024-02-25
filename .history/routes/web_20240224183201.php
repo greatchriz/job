@@ -81,9 +81,6 @@ Route::middleware([
 
     Route::put('/admin/form-inputs/{formInput}/update', [\App\Http\Controllers\AdminController::class, 'formInputsUpdate'])->name('admin.form-inputs.update');
 
-    //view-cv
-    Route::get('/job-applications/{jobApplication}/view-cv', [\App\Http\Controllers\JobApplicationController::class, 'viewCv'])->name('job-applications.view-cv');
-
     Route::put('/job-applications/{jobApplication}/update', [\App\Http\Controllers\JobApplicationController::class, 'update'])->name('job-applications.update');
 
     Route::put('/job-applications/{jobApplication}/reject', [\App\Http\Controllers\JobApplicationController::class, 'reject'])->name('job-applications.reject');

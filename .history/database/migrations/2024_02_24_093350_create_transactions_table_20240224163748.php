@@ -15,10 +15,13 @@ return new class extends Migration
             $table->id();
             $table->string('transaction_id');
             $table->string('amount');
+            $table->string('status');
+            $table->string('currency');
             $table->string('crypto_account');
-            $table->boolean('active')->default(false);
             // type of transaction which options are deposit, expenses, withdrawal
             $table->enum('type', ['deposit', 'expenses', 'withdrawal']);
+            //payment method
+            $table->string('payment_method');
             //user_id
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
 

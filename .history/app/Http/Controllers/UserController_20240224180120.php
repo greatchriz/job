@@ -116,13 +116,7 @@ class UserController extends Controller
         ]);
 
         // Redirect to dashboard with success message
-        return redirect()->route('deposit.complete', $transaction)->with('status', 'Deposit successful.');
-    }
-
-    //depositComplete: display the page that shows the details of the crypto account he selected and how to complete the deposit
-    public function depositComplete(Transaction $transaction)
-    {
-        return view('user.deposit-complete', ['transaction' => $transaction]);
+        return redirect()->route('dashboard')->with('status', 'Deposit successful.');
     }
 
 }
