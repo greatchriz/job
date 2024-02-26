@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Company;
 use App\Models\JobApplication;
 use App\Models\Message;
-use App\Models\location;
+use App\Models\Location;
 
 
 class Job extends Model

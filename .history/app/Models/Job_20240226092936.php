@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Company;
 use App\Models\JobApplication;
+use App\Models\Message;
+use App\Models\Location;
+
 
 class Job extends Model
 {
@@ -23,4 +26,11 @@ class Job extends Model
     {
         return $this->hasMany(JobApplication::class);
     }
+
+    // location
+    public function location()
+    {
+        return $this->belongsTo(Location::class);
+    }
+
 }
