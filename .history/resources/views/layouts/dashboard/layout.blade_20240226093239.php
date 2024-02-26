@@ -341,7 +341,6 @@ var chart = new Chart(ctx, {
 });
 </script>
 
-<script src="//code.tidio.co/vgcpcecgqwp1vgdulupaqtj8hhcheo9g.js" async></script>
 
 </body>
 
