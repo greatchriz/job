@@ -8,7 +8,6 @@ use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 use App\Models\FormInput;
 use App\Models\JobApplication;
-use App\Models\Job;
 
 
 class AdminController extends Controller
@@ -132,32 +131,10 @@ class AdminController extends Controller
 
     public function jobs()
     {
-        $jobs = Job::with('location')->get();
+        $jobs = \App\Models\Job::all();
         return view('admin.jobs', [
             'jobs' => $jobs
         ]);
-    }
-
-    //jobsEdit
-
-    public function jobsEdit(Job $job)
-    {
-        // get job with its related location
-        $job = Job::with('location')->find($job->id);
-        $locations = \App\Models\Location::all();
-        return view('admin.jobs-edit', [
-            'job' => $job,
-            'locations' => $locations
-        ]);
-    }
-
-    //jobsUpdate
-
-    public function jobsUpdate(Request $request, Job $job)
-    {
-        $job = Job::find($job->id);
-        $job->update($request->all());
-        return redirect()->route('admin.jobs')->with('success', 'Job updated successfully');
     }
 
 }

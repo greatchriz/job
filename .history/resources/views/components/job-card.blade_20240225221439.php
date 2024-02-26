@@ -5,18 +5,16 @@
                 <div class="company-area">
                     <div class="logo">
                         <img
-                            src="assets/images/bg/company-logo/company-01.png"
+                            src="{{ $job->companyLogo }}"
                             alt>
                     </div>
                     <div class="company-details">
                         <div
                             class="name-location">
                             <h5><a
-                                    href="job-details.html">Senior
-                                    Receptionist</a></h5>
+                                    href="/jobs/{{ $job->id }}">{{ $job->title }}</a></h5>
                             <p><a
-                                    href="company-details.html">Medico.co
-                                    Ltd</a></p>
+                                    href="/jobs/{{ $job->id }}">{{ $job->company->name }}</a></p>
                         </div>
                     </div>
                 </div>
@@ -25,15 +23,15 @@
                         <li>
                             <p><span
                                     class="title">Salary:</span>
-                                $20K-$50K /
+                                {{ $job->salary }} /
                                 <span
                                     class="time">Per
-                                    Month</span></p>
+                                    Year</span></p>
                         </li>
                         <li>
                             <p><span
                                     class="title">Deadline:</span>
-                                05 April, 2023</p>
+                                {{ $job->deadline }}</p>
                         </li>
                     </ul>
                 </div>
@@ -50,11 +48,7 @@
                     Time</span>
                 <span class="light-blue">Remote</span>
             </div>
-            <div class="apply-btn">
-                <a href="job-details.html"><span><img
-                            src="assets/images/icon/apply-ellipse.svg"
-                            alt></span>Apply Now</a>
-            </div>
+            {{ $slot }}
         </div>
     </div>
 </div>

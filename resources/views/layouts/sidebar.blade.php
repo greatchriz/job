@@ -7,6 +7,8 @@
 <x-dashboard.sidebar-nav
     :active="request()->routeIs('admin.form-inputs')" href="{{ route('admin.form-inputs') }}" title="Form Inputs"/>
 
+<x-dashboard.sidebar-nav :active="request()->routeIs('admin.jobs')" href="{{ route('admin.jobs') }}" title="Jobs List" />
+
 
 @else
 

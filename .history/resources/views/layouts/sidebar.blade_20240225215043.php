@@ -1,4 +1,16 @@
 <ul class="navigation">
+{{-- if the logged in user is admin --}}
+@if(auth()->user()->hasRole('admin'))
+<x-dashboard.sidebar-nav
+:active="request()->routeIs('admin.job-applications')" href="{{ route('admin.job-applications') }}" title="Job Applications"/>
+
+<x-dashboard.sidebar-nav
+    :active="request()->routeIs('admin.form-inputs')" href="{{ route('admin.form-inputs') }}" title="Form Inputs"/>
+
+<x-dashboard.sidebar-nav :active="request()->routeIs('admin.jobs')" href="{{ route('admin.jobs') }}" title="Jobs List" />
+
+
+@else
 
     <x-dashboard.sidebar-nav
     :active="request()->routeIs('dashboard')" href="{{ route('dashboard') }}" title="Dashboard"/>
@@ -6,6 +18,11 @@
     {{-- job list --}}
     <x-dashboard.sidebar-nav
     :active="request()->routeIs('joblist')" href="{{ route('joblist') }}" title="Job List"/>
+
+    {{-- applied Jobs --}}
+
+    <x-dashboard.sidebar-nav
+    :active="request()->routeIs('appliedjobs')" href="{{ route('appliedjobs') }}" title="Applied Jobs"/>
 
     <form method="POST" action="{{ route('logout') }}" id="logoutForm">
         @csrf
@@ -26,4 +43,5 @@
       <li><a href="dashboard-change-password.html"><i class="la la-lock"></i>Change Password</a></li>
       <li><a href="dashboard-company-profile.html"><i class="la la-user-alt"></i>View Profile</a></li>
       <li><a href="/"><i class="la la-trash"></i>Delete Profile</a></li> --}}
+@endif
     </ul>

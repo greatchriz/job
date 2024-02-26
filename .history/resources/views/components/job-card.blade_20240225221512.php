@@ -5,16 +5,16 @@
                 <div class="company-area">
                     <div class="logo">
                         <img
-                            src="{{ $job->company->logo }}"
+                            src="{{ $job->companyLogo }}"
                             alt>
                     </div>
                     <div class="company-details">
                         <div
                             class="name-location">
                             <h5><a
-                                    href="job-details.html">{{ $job->title }}</a></h5>
+                                    href="/jobs/{{ $job->id }}">{{ $job->title }}</a></h5>
                             <p><a
-                                    href="company-details.html">{{ $job->company->name }}</a></p>
+                                    href="/jobs/{{ $job->id }}">{{ $job->companyName }}</a></p>
                         </div>
                     </div>
                 </div>
@@ -48,11 +48,7 @@
                     Time</span>
                 <span class="light-blue">Remote</span>
             </div>
-            <div class="apply-btn">
-                <a href="job-details.html"><span><img
-                            src="assets/images/icon/apply-ellipse.svg"
-                            alt></span>Apply Now</a>
-            </div>
+            {{ $slot }}
         </div>
     </div>
 </div>

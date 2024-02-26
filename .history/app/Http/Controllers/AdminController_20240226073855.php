@@ -151,14 +151,5 @@ class AdminController extends Controller
         ]);
     }
 
-    //jobsUpdate
-
-    public function jobsUpdate(Request $request, Job $job)
-    {
-        $job = Job::find($job->id);
-        $job->update($request->all());
-        return redirect()->route('admin.jobs')->with('success', 'Job updated successfully');
-    }
-
 }
 
