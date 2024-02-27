@@ -33,7 +33,7 @@
                         Segment</li>
                     <li style="fot-weight: 500"><span class="icon flaticon-map-locator"></span>
                         {{ $job->jobLocation }}</li> --}}
-                    <li style="fot-weight: 500"><span class="icon flaticon-clock-3"></span> {{ \Carbon\Carbon::parse($user->created_at)->diffForHumans() }}</li>
+                    <li style="fot-weight: 500"><span class="icon flaticon-clock-3"></span> {{ \Carbon\Carbon::parse($job->created_at)->diffForHumans() }}</li>
                     {{-- <li style="fot-weight: 500"><span class="icon flaticon-money"></span> {{ $job->salary }}</li> --}}
                 </ul>
 
@@ -44,7 +44,7 @@
             <div class="col-3" style="margin: 5px">
                 <div class="btn-box">
 
-                    <a href="{{ route('admin.users.edit', $user->id) }}" class="theme-btn btn-style-three">Edit User</a>
+                    <a href="{{ route('admin.users.edit', $user->id) }}" class="theme-btn btn-style-three">Edit Job</a>
                     <button class="bookmark-btn"><i class="flaticon-bookmark"></i></button>
                 </div>
             </div>

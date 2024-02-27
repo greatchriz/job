@@ -18,22 +18,22 @@
     <div class="job-block">
         <div class="inner-box">
             <div class="content">
-                <span class="company-logo"><img src="{{ $user->profile_photo }}" alt></span>
+                <span class="company-logo"><img src="{{ $job->companyLogo }}" alt></span>
 
-                <h4><a href="#">{{ $user->name }}</a></h4>
+                <h4><a href="#">{{ $job->title }}</a></h4>
 
-                <p style="font-weight: 700; margin-bottom: 5px">{{ $user->email }}</p>
+                <p style="font-weight: 700; margin-bottom: 5px">{{ $job->companyName }}</p>
 
 
 
-                <p style="font-weight: 500; margin-bottom: 10px">{{ $user->account_balance }}</p>
+                <p style="font-weight: 500; margin-bottom: 10px">{{ $job->description }}</p>
 
                 <ul class="job-info" style="margin-bottom: 5px">
-                    {{-- <li style="fot-weight: 500"><span class="icon flaticon-briefcase"></span>
+                    <li style="fot-weight: 500"><span class="icon flaticon-briefcase"></span>
                         Segment</li>
                     <li style="fot-weight: 500"><span class="icon flaticon-map-locator"></span>
-                        {{ $job->jobLocation }}</li> --}}
-                    <li style="fot-weight: 500"><span class="icon flaticon-clock-3"></span> {{ \Carbon\Carbon::parse($user->created_at)->diffForHumans() }}</li>
+                        {{ $job->jobLocation }}</li>
+                    <li style="fot-weight: 500"><span class="icon flaticon-clock-3"></span> {{ \Carbon\Carbon::parse($job->created_at)->diffForHumans() }}</li>
                     {{-- <li style="fot-weight: 500"><span class="icon flaticon-money"></span> {{ $job->salary }}</li> --}}
                 </ul>
 
@@ -44,7 +44,7 @@
             <div class="col-3" style="margin: 5px">
                 <div class="btn-box">
 
-                    <a href="{{ route('admin.users.edit', $user->id) }}" class="theme-btn btn-style-three">Edit User</a>
+                    <a href="{{ route('admin.users.edit', $user->id) }}" class="theme-btn btn-style-three">Edit Job</a>
                     <button class="bookmark-btn"><i class="flaticon-bookmark"></i></button>
                 </div>
             </div>

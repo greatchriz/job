@@ -131,7 +131,7 @@ class AdminController extends Controller
     //users
     public function users()
     {
-        $users = User::all();
+        $users = User::with('applications');
         return view('admin.users', [
             'users' => $users
         ]);

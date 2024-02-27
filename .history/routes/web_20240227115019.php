@@ -92,15 +92,8 @@ Route::middleware([
     //admin.jobs.create
     Route::get('/admin/jobs/create', [\App\Http\Controllers\AdminController::class, 'jobsCreate'])->name('admin.jobs.create');
 
-    //admin.users.create
-    Route::get('/admin/users/create', [\App\Http\Controllers\AdminController::class, 'usersCreate'])->name('admin.users.create');
-
     //admin.users
     Route::get('/admin/users', [\App\Http\Controllers\AdminController::class, 'users'])->name('admin.users');
-
-    //admin.users.edit
-    Route::get('/admin/users/{user}/edit', [\App\Http\Controllers\AdminController::class, 'usersEdit'])->name('admin.users.edit');
-
 
 
     //view-cv

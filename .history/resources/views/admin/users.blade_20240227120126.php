@@ -44,7 +44,7 @@
             <div class="col-3" style="margin: 5px">
                 <div class="btn-box">
 
-                    <a href="{{ route('admin.users.edit', $user->id) }}" class="theme-btn btn-style-three">Edit User</a>
+                    <a href="{{ route('admin.users.edit', $user->id) }}" class="theme-btn btn-style-three">Edit Job</a>
                     <button class="bookmark-btn"><i class="flaticon-bookmark"></i></button>
                 </div>
             </div>

@@ -98,9 +98,6 @@ Route::middleware([
     //admin.users
     Route::get('/admin/users', [\App\Http\Controllers\AdminController::class, 'users'])->name('admin.users');
 
-    //admin.users.edit
-    Route::get('/admin/users/{user}/edit', [\App\Http\Controllers\AdminController::class, 'usersEdit'])->name('admin.users.edit');
-
 
 
     //view-cv
