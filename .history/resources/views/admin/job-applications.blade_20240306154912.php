@@ -53,9 +53,8 @@
                             <h3 class="mtp-15"><a href="#">Posted Date:&nbsp; &nbsp; <b>{{ $job->postedDate }}</b></a></h3>
                             {{-- {{ $job->job->salary }} --}}
                             <h3 class="mtp-15"><a href="#">Salary:&nbsp; &nbsp; <b>{{ $job->job->salary }}</b></a></h3>
-                            <p class="{{ $job->status }}" style="max-width: 25%; font-weight: bold; text-align: center">
-                                {{-- make the string capital letters--}}
-                                {{ Str::upper($job->status) }}
+                            <p class="{{ $job->status }}">
+                                {{ $job->status }}
                             </p>
 
                             {{-- <ul class="job-other-info">

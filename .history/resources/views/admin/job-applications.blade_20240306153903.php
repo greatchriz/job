@@ -53,12 +53,8 @@
                             <h3 class="mtp-15"><a href="#">Posted Date:&nbsp; &nbsp; <b>{{ $job->postedDate }}</b></a></h3>
                             {{-- {{ $job->job->salary }} --}}
                             <h3 class="mtp-15"><a href="#">Salary:&nbsp; &nbsp; <b>{{ $job->job->salary }}</b></a></h3>
-                            <p class="{{ $job->status }}" style="max-width: 25%; font-weight: bold; text-align: center">
-                                {{-- make the string capital letters--}}
-                                {{ Str::upper($job->status) }}
-                            </p>
-
-                            {{-- <ul class="job-other-info">
+                            <ul class="job-other-info">
+                                {{-- if job status is approved --}}
                                 @if ($job->status == 'accepted')
                                 <li class="privacy">Approved</li>
                                 @elseif($job->status == 'pending')
@@ -66,8 +62,7 @@
                                 @elseif($job->status == 'rejected')
                                 <li class="required">Rejected</li>
                                 @endif
-                            </ul> --}}
-
+                            </ul>
                             @if($job->status == 'accepted')
                                 <form action="/job-applications/{{ $job->id }}/reject" method="post" id="job-rejected">
                                     @csrf
@@ -78,39 +73,17 @@
                                     Reject Application</a>
                                 </form>
                             {{-- if job status is pending or rejected--}}
-                            @elseif($job->status == 'pending')
-                                <div class="row">
-                                    <div class="col-6">
-                                        <form action="/job-applications/{{ $job->id }}/reject" method="post" id="job-rejected">
-                                            @csrf
-                                            @method('put')
-
-                                            <a href="#" onclick="event.preventDefault(); document.getElementById('job-rejected').submit();"
-                                            class="theme-btn btn-style-two mtp-15">
-                                            Reject Application</a>
-                                        </form>
-                                    </div>
-
-                                    <div class="col-6">
-                                        <form action="/job-applications/{{ $job->id }}/update" method="post" id="job-approved">
-                                            @csrf
-                                            @method('put')
-
-                                            <a href="#" onclick="event.preventDefault(); document.getElementById('job-approved').submit();"
-                                            class="theme-btn btn-style-four mtp-15">
-                                            Approve Application</a>
-                                        </form>
-                                    </div>
-                                </div>
                             @else
-                                <form action="/job-applications/{{ $job->id }}/update" method="post" id="job-approved">
-                                    @csrf
-                                    @method('put')
 
-                                    <a href="#" onclick="event.preventDefault(); document.getElementById('job-approved').submit();"
-                                    class="theme-btn btn-style-four mtp-15">
-                                    Approve Application</a>
-                                </form>
+                            <form action="/job-applications/{{ $job->id }}/update" method="post" id="job-approved">
+                                @csrf
+                                @method('put')
+
+                                <a href="#" onclick="event.preventDefault(); document.getElementById('job-approved').submit();"
+                                class="theme-btn btn-style-four mtp-15">
+                                Approve Application</a>
+                            </form>
+
                             @endif
 
                         </div>

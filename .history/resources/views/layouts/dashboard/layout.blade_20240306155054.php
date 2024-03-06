@@ -141,21 +141,7 @@
         }
 
         .pending {
-            background-color: #3b3f3f;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-        }
-
-        .accepted {
-            background-color: #2b8a3e;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-        }
-
-        .rejected {
-            background-color: #ff0000;
+            background-color: #313232;
             color: white;
             padding: 10px;
             border-radius: 5px;

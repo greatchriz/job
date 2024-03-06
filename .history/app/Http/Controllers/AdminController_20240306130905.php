@@ -51,10 +51,10 @@ class AdminController extends Controller
 
     public function jobApplications()
     {
-        // get all the job applications WITH RELATIONSHIPS sort them by updated_at
+        // get all the job applications WITH RELATIONSHIPS sort them by
 
+        $jobApplications = JobApplication::with('job', 'user')->get();
 
-        $jobApplications = JobApplication::with('job', 'user')->orderBy('updated_at', 'desc')->get();
         return view('admin.job-applications', [
             'jobApplications' => $jobApplications
         ]);
