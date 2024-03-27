@@ -9,8 +9,25 @@
 
     @endslot
 
+    @props(['section'])
 
+    <!-- Call To Action Two -->
+    <section
+        style=""
+        class="call-to-action-two"
+        style="background-image: url(images/background/8.png);"
+    >
+        <div class="auto-container wow fadeInUp">
+            <div class="sec-title light text-center">
 
+                    <h2>title</h2>
+
+                    <div class="text">text</div>
+
+            </div>
+        </div>
+    </section>
+    <!-- End Call To Action -->
 
     <x-main-pages.home.banner-section />
 

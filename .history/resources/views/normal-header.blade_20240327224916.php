@@ -225,7 +225,7 @@
 <!--End Main Header -->
 
    <!-- Call To Action Two -->
-   <section class="call-to-action-two" style="margin-top: 25px;padding: 0px;">
+   <section class="call-to-action-two" style="margin-top: 90px;padding: 0px;">
     <div class="auto-container wow fadeInUp">
         <div class="sec-title light text-center">
 

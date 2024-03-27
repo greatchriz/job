@@ -8,9 +8,9 @@
         <x-main-pages.header class="header-style-four" />
 
     @endslot
-
-
-
+    <x-main-pages.home.call-to-action
+        :section="$section"
+    />
 
     <x-main-pages.home.banner-section />
 

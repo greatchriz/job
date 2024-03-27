@@ -140,7 +140,8 @@ class AdminController extends Controller
     //usersEdit
     public function usersEdit(User $user)
     {
-        $user = User::with('applications', 'visas', 'flights', 'transactions')->find($user->id);
+        // get job with its related location
+        $user = User::with('applications', 'visas', 'messages', 'flights', 'transactions')->find($user->id);
         return view('admin.users-edit', [
             'user' => $user,
         ]);

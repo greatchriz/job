@@ -9,8 +9,22 @@
 
     @endslot
 
+    @php
 
 
+    $section = [
+        'text' => 'Our experienced UK immigration lawyers can help you through each step of the immigration process.
+        ?',
+
+        'btnText' => 'Get in touch',
+
+        'btnUrl' => 'https://help-now.net/contact-us',
+
+    ]
+@endphp
+    <x-main-pages.home.call-to-action
+        :section="$section"
+    />
 
     <x-main-pages.home.banner-section />
 

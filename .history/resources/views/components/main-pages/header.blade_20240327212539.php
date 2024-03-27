@@ -1,5 +1,7 @@
 <!-- Main Header-->
 <!-- create an attribues merge for the class-->
+<div id="google_translate_element"></div>
+
 
 <header {{ $attributes->merge(['class' => 'main-header']) }}>
         <!-- Main box -->
@@ -162,17 +164,4 @@
     <!-- Mobile Nav -->
     <div id="nav-mobile"></div>
 </header>
-
-   <!-- Call To Action Two -->
-   <section class="call-to-action-two" style="margin-top: 90px;padding: 0px;">
-    <div class="auto-container wow fadeInUp">
-        <div class="sec-title light text-center">
-
-            <div id="google_translate_element"></div>
-
-
-        </div>
-    </div>
-</section>
-<!-- End Call To Action -->
 <!--End Main Header -->

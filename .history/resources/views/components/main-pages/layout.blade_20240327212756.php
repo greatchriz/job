@@ -137,9 +137,11 @@
 
         <div class="page-wrapper">
 
+
             <!-- Preloader -->
             <div class="preloader"></div>
 
+            <div id="google_translate_element"></div>
 
             <!-- Main Header-->
             {{ $mainHeader }}
@@ -200,17 +202,13 @@
 
 
         </div><!-- End Page Wrapper -->
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL}, 'google_translate_element');
+            }
+            </script>
 
-
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-}
-</script>
-
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-
+            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         <script src="//code.tidio.co/vgcpcecgqwp1vgdulupaqtj8hhcheo9g.js" async></script>
 
 

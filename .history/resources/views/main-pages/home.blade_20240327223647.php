@@ -9,8 +9,23 @@
 
     @endslot
 
+    @props(['section'])
+
+    <!-- Call To Action Two -->
+    <section
+        class="call-to-action-two"
+        style="margin-top: 40px;"
+    >
+        <div class="auto-container wow fadeInUp">
+            <div class="sec-title light text-center">
+
+                    <h2 style="color: black">title</h2>
 
 
+            </div>
+        </div>
+    </section>
+    <!-- End Call To Action -->
 
     <x-main-pages.home.banner-section />
 

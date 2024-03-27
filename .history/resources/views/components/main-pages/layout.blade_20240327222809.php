@@ -140,7 +140,9 @@
             <!-- Preloader -->
             <div class="preloader"></div>
 
-
+            <div style="margin-top: 25px; margin-bottom: 25px; background-color:blue">
+                <p style="color: white">hello</p>
+            </div>
             <!-- Main Header-->
             {{ $mainHeader }}
 
@@ -200,17 +202,6 @@
 
 
         </div><!-- End Page Wrapper -->
-
-
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-}
-</script>
-
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-
         <script src="//code.tidio.co/vgcpcecgqwp1vgdulupaqtj8hhcheo9g.js" async></script>
 
 
