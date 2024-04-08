@@ -8,7 +8,7 @@
             'title' => 'Helpnow: Your Gateway to Opportunity and Mobility',
             'description' => 'Find your dream job abroad, navigate Visa and Residency applications, and plan your relocation with Helpnow\'s comprehensive suite of services.',
             'keywords' => 'job board, overseas jobs, Visa application, Residency permit, relocation services, flights, hotels, apartments, car rentals, Helpnow',
-            'ogImage' => 'https://help-now.net/images/index-13/header/test.png',
+            'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
         ],
 
         [
@@ -16,7 +16,7 @@
             'title' => 'Helpnow: Who We Are and What We Do.',
             'description' => 'Discover Helpnow\'s mission, values, and team. Learn how we help individuals and businesses thrive in the international job market.',
             'keywords' => 'Helpnow, mission statement, values, team, global mobility, job seekers, employers, relocation assistance',
-            'ogImage' => 'https://help-now.net/images/index-13/header/test.png',
+            'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
         ],
 
         [
@@ -24,7 +24,7 @@
             'title' => 'Get in Touch with Helpnow: We\'re Here to Help.',
             'description' => 'Have questions or need assistance? Reach out to our friendly team for personalized support.',
             'keywords' => 'contact Helpnow, customer support, inquiries, relocation advice, job search help',
-            'ogImage' => 'https://help-now.net/images/index-13/header/test.png',
+            'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
         ],
 
         [
@@ -32,7 +32,7 @@
             'title' => 'Helpnow Blog: Insights for Your Global Career.',
             'description' => 'Dive into expert tips, industry trends, and inspiring stories to navigate the international job market and relocation process successfully.',
             'keywords' => 'Helpnow blog, career advice, relocation tips, international job market, expat life',
-            'ogImage' => 'https://help-now.net/images/index-13/header/test.png',
+            'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
         ],
 
         [
@@ -40,7 +40,7 @@
             'title' => 'Helpnow: Find Your Dream Job Abroad.',
             'description' => 'Browse thousands of exciting job opportunities worldwide. Start your journey to a fulfilling career abroad today!',
             'keywords' => 'international jobs, job search, overseas careers, Helpnow job board, career opportunities',
-            'ogImage' => 'https://help-now.net/images/index-13/header/test.png',
+            'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
         ],
 
         [
@@ -48,7 +48,7 @@
             'title' => 'Helpnow: Our Services: Your Global Mobility Partner.',
             'description' => 'Simplify your relocation with our comprehensive services, including Visa applications, Residency permits, flights, accommodation, and more.',
             'keywords' => 'Visa application, Residency permit, relocation services, flights, hotels, apartments, car rentals, Helpnow services',
-            'ogImage' => 'https://help-now.net/images/index-13/header/test.png',
+            'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
         ],
 
         [
@@ -56,7 +56,7 @@
             'title' => 'Helpnow: Terms of Service: Read Before Using Our Platform.',
             'description' => 'Ensure a smooth and compliant experience by understanding our terms of service.',
             'keywords' => 'terms of service, user agreement, legal terms, Helpnow terms, privacy policy',
-            'ogImage' => 'https://help-now.net/images/index-13/header/test.png',
+            'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
         ],
 
         [
@@ -64,7 +64,7 @@
             'title' => 'Your Data is Secure: Helpnow Privacy Policy.',
             'description' => 'Learn how Helpnow protects your personal information and respects your privacy.',
             'keywords' => 'privacy policy, data protection, privacy, user data, Helpnow privacy',
-            'ogImage' => 'https://help-now.net/images/index-13/header/test.png',
+            'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
         ]
 
     ];
@@ -166,9 +166,9 @@
 
                                     <p class="address">2001,Strawinskylaan Amsterdam, <br> North Holland, Netherlands.
                                         <br><a
-                                            href="mailto:support@help-now.net"
+                                            href="mailto:support@nexus-travel.agency"
                                             class="email"
-                                        >support@help-now.net</a></p>
+                                        >support@nexus-travel.agency</a></p>
                                 </div>
                             </div>
                         </div>
@@ -180,7 +180,7 @@
                 <div class="footer-bottom">
                     <div class="auto-container">
                         <div class="outer-box">
-                            <div class="copyright-text">© 2023 <a href="help-now.net">Helpnow</a>. All Right Reserved.</div>
+                            <div class="copyright-text">© 2023 <a href="nexus-travel.agency">Helpnow</a>. All Right Reserved.</div>
                             <div class="social-links">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#"><i class="fab fa-twitter"></i></a>
