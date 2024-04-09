@@ -31,7 +31,7 @@
                 >
                     <div class="content">
                         <h3 class="color-dark-1">Unleash Your Potential</h3>
-                        <p class="color-dark-2">Register as a Candidate on Helpnow
+                        <p class="color-dark-2">Register as a Candidate on Nexustravel
                         </p>
                         <a
                             href="/register"

@@ -5,65 +5,65 @@
     $pagesmeta = [
         [
             'url' => route('home'),
-            'title' => 'Helpnow: Your Gateway to Opportunity and Mobility',
-            'description' => 'Find your dream job abroad, navigate Visa and Residency applications, and plan your relocation with Helpnow\'s comprehensive suite of services.',
-            'keywords' => 'job board, overseas jobs, Visa application, Residency permit, relocation services, flights, hotels, apartments, car rentals, Helpnow',
+            'title' => 'Nexustravel: Your Gateway to Opportunity and Mobility',
+            'description' => 'Find your dream job abroad, navigate Visa and Residency applications, and plan your relocation with Nexustravel\'s comprehensive suite of services.',
+            'keywords' => 'job board, overseas jobs, Visa application, Residency permit, relocation services, flights, hotels, apartments, car rentals, Nexustravel',
             'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
         ],
 
         [
             'url' => route('about-us'),
-            'title' => 'Helpnow: Who We Are and What We Do.',
-            'description' => 'Discover Helpnow\'s mission, values, and team. Learn how we help individuals and businesses thrive in the international job market.',
-            'keywords' => 'Helpnow, mission statement, values, team, global mobility, job seekers, employers, relocation assistance',
+            'title' => 'Nexustravel: Who We Are and What We Do.',
+            'description' => 'Discover Nexustravel\'s mission, values, and team. Learn how we help individuals and businesses thrive in the international job market.',
+            'keywords' => 'Nexustravel, mission statement, values, team, global mobility, job seekers, employers, relocation assistance',
             'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
         ],
 
         [
             'url' => route('contact-us'),
-            'title' => 'Get in Touch with Helpnow: We\'re Here to Help.',
+            'title' => 'Get in Touch with Nexustravel: We\'re Here to Help.',
             'description' => 'Have questions or need assistance? Reach out to our friendly team for personalized support.',
-            'keywords' => 'contact Helpnow, customer support, inquiries, relocation advice, job search help',
+            'keywords' => 'contact Nexustravel, customer support, inquiries, relocation advice, job search help',
             'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
         ],
 
         [
             'url' => route('blog'),
-            'title' => 'Helpnow Blog: Insights for Your Global Career.',
+            'title' => 'Nexustravel Blog: Insights for Your Global Career.',
             'description' => 'Dive into expert tips, industry trends, and inspiring stories to navigate the international job market and relocation process successfully.',
-            'keywords' => 'Helpnow blog, career advice, relocation tips, international job market, expat life',
+            'keywords' => 'Nexustravel blog, career advice, relocation tips, international job market, expat life',
             'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
         ],
 
         [
             'url' => route('job-listing'),
-            'title' => 'Helpnow: Find Your Dream Job Abroad.',
+            'title' => 'Nexustravel: Find Your Dream Job Abroad.',
             'description' => 'Browse thousands of exciting job opportunities worldwide. Start your journey to a fulfilling career abroad today!',
-            'keywords' => 'international jobs, job search, overseas careers, Helpnow job board, career opportunities',
+            'keywords' => 'international jobs, job search, overseas careers, Nexustravel job board, career opportunities',
             'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
         ],
 
         [
             'url' => route('services'),
-            'title' => 'Helpnow: Our Services: Your Global Mobility Partner.',
+            'title' => 'Nexustravel: Our Services: Your Global Mobility Partner.',
             'description' => 'Simplify your relocation with our comprehensive services, including Visa applications, Residency permits, flights, accommodation, and more.',
-            'keywords' => 'Visa application, Residency permit, relocation services, flights, hotels, apartments, car rentals, Helpnow services',
+            'keywords' => 'Visa application, Residency permit, relocation services, flights, hotels, apartments, car rentals, Nexustravel services',
             'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
         ],
 
         [
             'url' => route('terms'),
-            'title' => 'Helpnow: Terms of Service: Read Before Using Our Platform.',
+            'title' => 'Nexustravel: Terms of Service: Read Before Using Our Platform.',
             'description' => 'Ensure a smooth and compliant experience by understanding our terms of service.',
-            'keywords' => 'terms of service, user agreement, legal terms, Helpnow terms, privacy policy',
+            'keywords' => 'terms of service, user agreement, legal terms, Nexustravel terms, privacy policy',
             'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
         ],
 
         [
             'url' => route('privacy-policy'),
-            'title' => 'Your Data is Secure: Helpnow Privacy Policy.',
-            'description' => 'Learn how Helpnow protects your personal information and respects your privacy.',
-            'keywords' => 'privacy policy, data protection, privacy, user data, Helpnow privacy',
+            'title' => 'Your Data is Secure: Nexustravel Privacy Policy.',
+            'description' => 'Learn how Nexustravel protects your personal information and respects your privacy.',
+            'keywords' => 'privacy policy, data protection, privacy, user data, Nexustravel privacy',
             'ogImage' => 'https://nexus-travel.agency/images/index-13/header/test.png',
         ]
 
@@ -180,7 +180,7 @@
                 <div class="footer-bottom">
                     <div class="auto-container">
                         <div class="outer-box">
-                            <div class="copyright-text">© 2023 <a href="nexus-travel.agency">Helpnow</a>. All Right Reserved.</div>
+                            <div class="copyright-text">© 2023 <a href="nexus-travel.agency">Nexustravel</a>. All Right Reserved.</div>
                             <div class="social-links">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#"><i class="fab fa-twitter"></i></a>

@@ -97,7 +97,7 @@
         $section = [
             'title' => 'Why choose the Immigration Advice Service team?',
             'texts' => [
-                'Navigating the complexities of UK immigration law and visa applications can be a confusing process without the right help. Whatever the nature of your case, Helpnows’ immigration lawyers are ready to take this stressful burden away from you and your family.',
+                'Navigating the complexities of UK immigration law and visa applications can be a confusing process without the right help. Whatever the nature of your case, Nexustravels’ immigration lawyers are ready to take this stressful burden away from you and your family.',
             ],
         ];
     @endphp
@@ -109,7 +109,7 @@
     @php
 
         $section = [
-            'title' => 'Why hire one of Helpnows’ lawyers?',
+            'title' => 'Why hire one of Nexustravels’ lawyers?',
             'texts' => [
                 'Our experienced nationwide immigration lawyers have an exemplary track record in Family and Partner Visa cases, as well as other point-based applications, such as Tier 1 and Skilled worker permits',
                 'Our bespoke services are available to those who plan to enter the UK, those who are already in the country and wish to extend their stay, and to asylum seekers and bail detainees.',
@@ -127,7 +127,7 @@
     @php
 
     $section = [
-        'title' => 'How can Helpnow help me and my family?',
+        'title' => 'How can Nexustravel help me and my family?',
         'texts' => [
             'We have a nationwide network of immigration advice centres, and we provide efficient and excellent support to all our clients across Britain. We employ some of the best immigration specialists and caseworkers in the UK, and our staff are OISC-trained and regulated.',
             'As well as making private and corporate applications for clients, we conduct publicly funded work for asylum-seekers, domestic-abuse survivors and victims of trafficking. IAS has a Legal Aid Agency Specialist Quality Mark (SQM).',

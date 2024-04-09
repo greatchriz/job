@@ -12,7 +12,7 @@
             <tr style="height: 23px;">
               <td style="padding: 15px 24px; color: #8492a6; height: 23px; width: 425.02px; text-align: center;">
                 <p data-sourcepos="7:1-7:41">Thanks for signing up for
-                  <strong>Helpnow.</strong>
+                  <strong>Nexustravel.</strong>
                 </p>
                 <p data-sourcepos="9:1-9:95">To complete your registration, please verify your email address by clicking the following link:</p>
                 <p data-sourcepos="9:1-9:34">
@@ -29,7 +29,7 @@
               </td>
             </tr>
             <tr style="height: 16px;">
-              <td style="padding: 16px 8px; color: #8492a6; background: #ebd8d8; text-align: center; height: 16px; width: 457.012px;">© 2024 Helpnow</td>
+              <td style="padding: 16px 8px; color: #8492a6; background: #ebd8d8; text-align: center; height: 16px; width: 457.012px;">© 2024 Nexustravel</td>
             </tr>
           </tbody>
         </table>
